@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Client - RDoc Documentation</title>
+
+<link href="./fonts.css" rel="stylesheet">
+<link href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/navigation.js"></script>
+<script src="./js/search_index.js"></script>
+<script src="./js/search.js"></script>
+<script src="./js/searcher.js"></script>
+<script src="./js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link"><a href="Base.html">Base</a>
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li class="calls-super" ><a href="#method-c-new">::new</a>
+    
+    <li ><a href="#method-i-ChangeInstanceType">#ChangeInstanceType</a>
+    
+    <li ><a href="#method-i-CreateInstance">#CreateInstance</a>
+    
+    <li ><a href="#method-i-CreateTemplate">#CreateTemplate</a>
+    
+    <li ><a href="#method-i-DeleteKeyPair">#DeleteKeyPair</a>
+    
+    <li ><a href="#method-i-DeleteTemplate">#DeleteTemplate</a>
+    
+    <li ><a href="#method-i-DescribeInstanceNetworkInterfaces">#DescribeInstanceNetworkInterfaces</a>
+    
+    <li ><a href="#method-i-DescribeInstanceStatus">#DescribeInstanceStatus</a>
+    
+    <li ><a href="#method-i-DescribeInstanceTypes">#DescribeInstanceTypes</a>
+    
+    <li ><a href="#method-i-DescribeInstanceVolumes">#DescribeInstanceVolumes</a>
+    
+    <li ><a href="#method-i-DescribeInstances">#DescribeInstances</a>
+    
+    <li ><a href="#method-i-DescribeKeyPairs">#DescribeKeyPairs</a>
+    
+    <li ><a href="#method-i-DescribeTemplates">#DescribeTemplates</a>
+    
+    <li ><a href="#method-i-GetBalance">#GetBalance</a>
+    
+    <li ><a href="#method-i-GetInstanceContractInfo">#GetInstanceContractInfo</a>
+    
+    <li ><a href="#method-i-GetInstanceMetadata">#GetInstanceMetadata</a>
+    
+    <li ><a href="#method-i-GetPasswordData">#GetPasswordData</a>
+    
+    <li ><a href="#method-i-ImportKeyPair">#ImportKeyPair</a>
+    
+    <li ><a href="#method-i-PutInstanceMetadata">#PutInstanceMetadata</a>
+    
+    <li ><a href="#method-i-RebootInstance">#RebootInstance</a>
+    
+    <li ><a href="#method-i-RebuildInstanceRootImage">#RebuildInstanceRootImage</a>
+    
+    <li ><a href="#method-i-RenewInstance">#RenewInstance</a>
+    
+    <li ><a href="#method-i-StartInstance">#StartInstance</a>
+    
+    <li ><a href="#method-i-StopInstance">#StopInstance</a>
+    
+    <li ><a href="#method-i-TerminateInstance">#TerminateInstance</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Client">
+  <h1 id="class-Client" class="class">
+    class Client
+  </h1>
+
+  <section class="description">
+    
+<p>基类函数为Base，sdk的实现类</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(access, secret, url, format='xml', timeout=300, debug=false)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>构造函数，实现继承基类函数</p>
+          
+          
+            <div class="method-calls-super">
+              Calls superclass method
+              <a href="Base.html#method-c-new">Base.new</a>
+            </div>
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File mos/sdk/v1/client.rb, line 8</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">access</span>, <span class="ruby-identifier">secret</span>, <span class="ruby-identifier">url</span>, <span class="ruby-identifier">format</span>=<span class="ruby-string">&#39;xml&#39;</span>, <span class="ruby-identifier">timeout</span>=<span class="ruby-value">300</span>, <span class="ruby-identifier">debug</span>=<span class="ruby-keyword">false</span>)
+  <span class="ruby-keyword">super</span>(<span class="ruby-identifier">access</span>, <span class="ruby-identifier">secret</span>, <span class="ruby-identifier">url</span>, <span class="ruby-identifier">format</span>, <span class="ruby-identifier">timeout</span>, <span class="ruby-identifier">debug</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-ChangeInstanceType" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ChangeInstanceType</span><span
+            class="method-args">(iid, itype, duration=nil, datadisk=nil, bandwidth=nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>更改虚拟机类型</p>
+<ul><li>
+<p>@param [String] iid 虚拟机ID</p>
+</li><li>
+<p>@param [String] itype  指定更改的虚拟机类型</p>
+</li><li>
+<p>@param [String] duration 指定更改后的初始租期，缺省为&#39;1M&#39;，即一个月</p>
+</li><li>
+<p>@param [Integer] datadisk 指定创建虚拟机使用的额外数据盘，单位为10GB</p>
+</li><li>
+<p>@param [Integer] bandwidth 指定创建虚拟机使用的额外带宽，单位为Mbps</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="ChangeInstanceType-source">
+            <pre><span class="ruby-comment"># File mos/sdk/v1/client.rb, line 219</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">ChangeInstanceType</span>(<span class="ruby-identifier">iid</span>, <span class="ruby-identifier">itype</span>, <span class="ruby-identifier">duration</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">datadisk</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">bandwidth</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">kwargs</span> = {}
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceType&#39;</span>] = <span class="ruby-identifier">itype</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">duration</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-regexp">/^\d+[HhMm]$/</span>.<span class="ruby-identifier">match</span>(<span class="ruby-identifier">duration</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;Duration&#39;</span>] = <span class="ruby-identifier">duration</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">raise</span> <span class="ruby-constant">Exception</span>(<span class="ruby-string">&#39;Illegal duration format&#39;</span>))
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;ExtraExtDisksize&#39;</span>] = <span class="ruby-identifier">datadisk</span><span class="ruby-operator">*</span><span class="ruby-value">10</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">datadisk</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;ExtraExtBandwidth&#39;</span>] = <span class="ruby-identifier">bandwidth</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">bandwidth</span>.<span class="ruby-identifier">nil?</span>
+
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;ChangeInstanceType&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-CreateInstance" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">CreateInstance</span><span
+            class="method-args">(imageid, itype, duration=nil, name=nil, keypair=nil, datadisk=nil, bandwidth=nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>创建虚拟机,创建时要提供datadisk和bandwidth参数</p>
+<ul><li>
+<p>@param [String] imageid 系统模板ID</p>
+</li><li>
+<p>@param [String] itype 虚拟机类型ID  例如 C4_M4 代表四核 4G内存</p>
+</li><li>
+<p>@param [String] duration 虚拟机租期, 缺省为&#39;1M&#39;，即一个月</p>
+</li><li>
+<p>@param [String] name 虚拟机名称(可选)</p>
+</li><li>
+<p>@param [String] keypair 虚拟机使用的SSH密钥ID</p>
+</li><li>
+<p>@param [Integer] datadisk 指定创建虚拟机使用的额外数据盘，单位为10GB</p>
+</li><li>
+<p>@param [Integer] bandwidth 指定创建虚拟机使用的额外带宽，单位为Mbps</p>
+</li><li>
+<p>@return [Hash]   创建成功的虚拟机信息</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="CreateInstance-source">
+            <pre><span class="ruby-comment"># File mos/sdk/v1/client.rb, line 111</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">CreateInstance</span>(<span class="ruby-identifier">imageid</span>, <span class="ruby-identifier">itype</span>, <span class="ruby-identifier">duration</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">name</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">keypair</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">datadisk</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">bandwidth</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">kwargs</span> = {}
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;ImageId&#39;</span>] = <span class="ruby-identifier">imageid</span>
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceType&#39;</span>] = <span class="ruby-identifier">itype</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">duration</span>.<span class="ruby-identifier">nil?</span>
+    <span class="ruby-regexp">/^\d+[HhMm]$/</span>.<span class="ruby-identifier">match</span>(<span class="ruby-identifier">duration</span>) <span class="ruby-operator">?</span> <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;Duration&#39;</span>] = <span class="ruby-identifier">duration</span> <span class="ruby-operator">:</span> (<span class="ruby-identifier">raise</span> <span class="ruby-constant">Exception</span>(<span class="ruby-string">&#39;Illegal duration format&#39;</span>))
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceName&#39;</span>] = <span class="ruby-identifier">name</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;KeyName&#39;</span>] = <span class="ruby-identifier">keypair</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">keypair</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;ExtraExtDisksize&#39;</span>] = <span class="ruby-identifier">datadisk</span><span class="ruby-operator">*</span><span class="ruby-value">10</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">datadisk</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;ExtraExtBandwidth&#39;</span>] = <span class="ruby-identifier">bandwidth</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">bandwidth</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-identifier">val</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;CreateInstance&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
+  <span class="ruby-identifier">val</span>[<span class="ruby-string">&#39;Instance&#39;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-CreateTemplate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">CreateTemplate</span><span
+            class="method-args">(iid, name, notes=nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>保存虚拟机的模板</p>
+<ul><li>
+<p>@param [String] iid 虚拟机ID</p>
+</li><li>
+<p>@param [String] name 模板名称</p>
+</li><li>
+<p>@param [String] notes 保存模板的说明</p>
+</li><li>
+<p>@return [Hash] 请求是否成功</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="CreateTemplate-source">
+            <pre><span class="ruby-comment"># File mos/sdk/v1/client.rb, line 297</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">CreateTemplate</span>(<span class="ruby-identifier">iid</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">notes</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">kwargs</span> = {}
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;Name&#39;</span>] = <span class="ruby-identifier">name</span>
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;Notes&#39;</span>] = <span class="ruby-identifier">notes</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">notes</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-identifier">val</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;CreateTemplate&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-DeleteKeyPair" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">DeleteKeyPair</span><span
+            class="method-args">(kid)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>删除一个SSH密钥对</p>
+<ul><li>
+<p>@param [String] kid 密钥对ID</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="DeleteKeyPair-source">
+            <pre><span class="ruby-comment"># File mos/sdk/v1/client.rb, line 286</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">DeleteKeyPair</span>(<span class="ruby-identifier">kid</span>)
+  <span class="ruby-identifier">kwargs</span> = {}
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;KeyName&#39;</span>] = <span class="ruby-identifier">kid</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;DeleteKeyPair&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-DeleteTemplate" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">DeleteTemplate</span><span
+            class="method-args">(tid)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>删除一个模板</p>
+<ul><li>
+<p>@param [String] tid 模板ID</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="DeleteTemplate-source">
+            <pre><span class="ruby-comment"># File mos/sdk/v1/client.rb, line 307</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">DeleteTemplate</span>(<span class="ruby-identifier">tid</span>)
+  <span class="ruby-identifier">kwargs</span> = {}
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;TemplateId&#39;</span>] = <span class="ruby-identifier">tid</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;DeleteTemplate&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-DescribeInstanceNetworkInterfaces" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">DescribeInstanceNetworkInterfaces</span><span
+            class="method-args">(iid, limit=0, offset=0, filters=nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>获取指定虚拟机的网络接口（虚拟网卡）信息</p>
+<ul><li>
+<p>@param [String] iid 虚拟机ID</p>
+</li><li>
+<p>@param [Integer] limit 最大返回数量，用于分页控制</p>
+</li><li>
+<p>@param [Integer] offset 返回的偏移量，用于分页控制</p>
+</li><li>
+<p>@param [Hash] filters 返回结果过滤条件，由hash的key/value指定过滤字段名和值</p>
+</li></ul>
+
+<p>@return [Hash] 指定虚拟机的网络接口（虚拟网卡）信息</p>
+          
+          
+
+          
+          <div class="method-source-code" id="DescribeInstanceNetworkInterfaces-source">
+            <pre><span class="ruby-comment"># File mos/sdk/v1/client.rb, line 73</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">DescribeInstanceNetworkInterfaces</span>(<span class="ruby-identifier">iid</span>, <span class="ruby-identifier">limit</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">offset</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">filters</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">kwargs</span> = {}
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">parse_array_params</span>(<span class="ruby-identifier">limit</span>, <span class="ruby-identifier">offset</span>, <span class="ruby-identifier">filters</span>, <span class="ruby-identifier">kwargs</span>)
+  <span class="ruby-identifier">val</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;DescribeInstanceNetworkInterfaces&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
+  <span class="ruby-identifier">val</span>[<span class="ruby-string">&#39;InstanceNetworkInterfaceSet&#39;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-DescribeInstanceStatus" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">DescribeInstanceStatus</span><span
+            class="method-args">(iid)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>获取虚拟机的状态</p>
+<ul><li>
+<p>@param [String] iid 虚拟机ID</p>
+</li><li>
+<p>@return [Hash] 虚拟机状态</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="DescribeInstanceStatus-source">
+            <pre><span class="ruby-comment"># File mos/sdk/v1/client.rb, line 130</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">DescribeInstanceStatus</span>(<span class="ruby-identifier">iid</span>)
+  <span class="ruby-identifier">kwargs</span> = {}
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
+  <span class="ruby-identifier">val</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;DescribeInstanceStatus&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
+  <span class="ruby-identifier">val</span>[<span class="ruby-string">&#39;InstanceStatus&#39;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-DescribeInstanceTypes" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">DescribeInstanceTypes</span><span
+            class="method-args">(limit=0, offset=0, filters=nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>获取所有虚拟机类型</p>
+<ul><li>
+<p>@param [Integer] limit 最大返回数量，用于分页控制</p>
+</li><li>
+<p>@param [Integer] offset 返回偏移量，用于分页控制</p>
+</li><li>
+<p>@param [Hash] filters 过滤条件，key/value分别指定过滤字段名称和值，支持的字段名称为：name, status</p>
+</li><li>
+<p>@return [Hash] 所有虚拟机信息</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="DescribeInstanceTypes-source">
+            <pre><span class="ruby-comment"># File mos/sdk/v1/client.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">DescribeInstanceTypes</span>(<span class="ruby-identifier">limit</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">offset</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">filters</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">kwargs</span> = {}
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">parse_array_params</span>(<span class="ruby-identifier">limit</span>, <span class="ruby-identifier">offset</span>, <span class="ruby-identifier">filters</span>, <span class="ruby-identifier">kwargs</span>) <span class="ruby-comment"># parse_list_params  父类函数</span>
+  <span class="ruby-identifier">val</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;DescribeInstanceTypes&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
+  <span class="ruby-identifier">val</span>[<span class="ruby-string">&#39;InstanceTypeSet&#39;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-DescribeInstanceVolumes" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">DescribeInstanceVolumes</span><span
+            class="method-args">(iid, limit=0, offset=0, filters=nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>获取指定虚拟机的虚拟磁盘信息</p>
+<ul><li>
+<p>@param [String] iid  虚拟机ID</p>
+</li><li>
+<p>@param [Integer] limit  最大返回数量，用于分页控制</p>
+</li><li>
+<p>@param [Integer] offset 返回的偏移量，用于分页控制</p>
+</li><li>
+<p>@param [Hash] filters 返回结果过滤条件，由hash的key/value指定过滤字段名和值</p>
+</li><li>
+<p>@return [Hash] 指定虚拟机磁盘列表</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="DescribeInstanceVolumes-source">
+            <pre><span class="ruby-comment"># File mos/sdk/v1/client.rb, line 59</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">DescribeInstanceVolumes</span>(<span class="ruby-identifier">iid</span>, <span class="ruby-identifier">limit</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">offset</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">filters</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">kwargs</span> = {}
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">parse_array_params</span>(<span class="ruby-identifier">limit</span>, <span class="ruby-identifier">offset</span>, <span class="ruby-identifier">filters</span>, <span class="ruby-identifier">kwargs</span>)
+  <span class="ruby-identifier">val</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;DescribeInstanceVolumes&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
+  <span class="ruby-identifier">val</span>[<span class="ruby-string">&#39;InstanceVolumeSet&#39;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-DescribeInstances" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">DescribeInstances</span><span
+            class="method-args">(ids=nil, names=nil, limit=0, offset=0, filters=nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>获得所有虚拟机</p>
+<ul><li>
+<p>@param [Array] ids 期望获取的虚拟机ID列表</p>
+</li><li>
+<p>@param [Array] names 期望获取信息的虚拟机名称列表</p>
+</li><li>
+<p>@param [Integer] limit  最多返回数量</p>
+</li><li>
+<p>@param [Integer] offset 返回虚拟机的偏移量，用于分页显示</p>
+</li><li>
+<p>@param [Hash] filters  过滤器，一个hash，包含过滤字段名和值，可能过滤字段为：name, status</p>
+</li><li>
+<p>@return [Hash] 虚拟机列表</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="DescribeInstances-source">
+            <pre><span class="ruby-comment"># File mos/sdk/v1/client.rb, line 44</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">DescribeInstances</span>(<span class="ruby-identifier">ids</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">names</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">limit</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">offset</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">filters</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">kwargs</span> = {}
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">ids</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">ids</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">ids</span>.<span class="ruby-identifier">size</span>() <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceName&#39;</span>] = <span class="ruby-identifier">names</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">names</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">names</span>.<span class="ruby-identifier">size</span>() <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">parse_array_params</span>(<span class="ruby-identifier">limit</span>, <span class="ruby-identifier">offset</span>, <span class="ruby-identifier">filters</span>, <span class="ruby-identifier">kwargs</span>)
+  <span class="ruby-identifier">val</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;DescribeInstances&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
+  <span class="ruby-identifier">val</span>[<span class="ruby-string">&#39;InstanceSet&#39;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-DescribeKeyPairs" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">DescribeKeyPairs</span><span
+            class="method-args">(limit=0, offset=0, filters=nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>获取用户的SSH密钥对</p>
+<ul><li>
+<p>@param [Integer] limit 最大返回数量，用于分页控制</p>
+</li><li>
+<p>@param [Integer] offset 返回偏移量，用于分页控制</p>
+</li><li>
+<p>@param [Hash] filters 过滤条件，key/value分别指定过滤字段名称和值，支持的字段名称为：name</p>
+</li><li>
+<p>@return [Hash]  包含SSH密钥对列表</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="DescribeKeyPairs-source">
+            <pre><span class="ruby-comment"># File mos/sdk/v1/client.rb, line 265</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">DescribeKeyPairs</span>(<span class="ruby-identifier">limit</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">offset</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">filters</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">kwargs</span> = {}
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">parse_array_params</span>(<span class="ruby-identifier">limit</span>, <span class="ruby-identifier">offset</span>, <span class="ruby-identifier">filters</span>, <span class="ruby-identifier">kwargs</span>)
+  <span class="ruby-identifier">val</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;DescribeKeyPairs&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
+  <span class="ruby-identifier">val</span>[<span class="ruby-string">&#39;KeyPairSet&#39;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-DescribeTemplates" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">DescribeTemplates</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>获得所有虚拟机模板</p>
+<ul><li>
+<p>@return [Hash] 模板列表</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="DescribeTemplates-source">
+            <pre><span class="ruby-comment"># File mos/sdk/v1/client.rb, line 26</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">DescribeTemplates</span>()
+  <span class="ruby-identifier">val</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;DescribeTemplates&#39;</span>)
+  <span class="ruby-identifier">val</span>[<span class="ruby-string">&#39;TemplateSet&#39;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-GetBalance" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">GetBalance</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>获取帐户余额和最近更新时间</p>
+<ul><li>
+<p>@return [Hash] 帐户余额和最近更新时间</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="GetBalance-source">
+            <pre><span class="ruby-comment"># File mos/sdk/v1/client.rb, line 33</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">GetBalance</span>()
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;GetBalance&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-GetInstanceContractInfo" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">GetInstanceContractInfo</span><span
+            class="method-args">(iid)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>获取虚拟机的租期信息</p>
+<ul><li>
+<p>@param [String] iid</p>
+</li><li>
+<p>@return [Hash]  虚拟机租期信息，包含过期时间、自动删除时间</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="GetInstanceContractInfo-source">
+            <pre><span class="ruby-comment"># File mos/sdk/v1/client.rb, line 96</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">GetInstanceContractInfo</span>(<span class="ruby-identifier">iid</span>)
+  <span class="ruby-identifier">kwargs</span> = {}
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;GetInstanceContractInfo&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-GetInstanceMetadata" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">GetInstanceMetadata</span><span
+            class="method-args">(iid)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>获取虚拟机的metadata</p>
+<ul><li>
+<p>@param [String] iid 虚拟机ID</p>
+</li><li>
+<p>@return [Hash]  一个hash,包含虚拟机所有metadata的key/value</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="GetInstanceMetadata-source">
+            <pre><span class="ruby-comment"># File mos/sdk/v1/client.rb, line 236</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">GetInstanceMetadata</span>(<span class="ruby-identifier">iid</span>)
+  <span class="ruby-identifier">kwargs</span> = {}
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
+  <span class="ruby-identifier">val</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;GetInstanceMetadata&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
+  <span class="ruby-identifier">val</span>[<span class="ruby-string">&#39;InstanceMetadata&#39;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-GetPasswordData" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">GetPasswordData</span><span
+            class="method-args">(iid, key_file=nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>获取虚拟机的Login帐户信息</p>
+<ul><li>
+<p>@param [String] iid 虚拟机ID</p>
+</li><li>
+<p>@param [String] key_file 私钥文件路径，如果虚拟机使用了SSH密钥，需要指定私钥解密password</p>
+</li><li>
+<p>@return [Hash] 虚拟机Login信息，包含帐户名称、密码，如果使用SSH密钥，则还包含密钥ID和名称</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="GetPasswordData-source">
+            <pre><span class="ruby-comment"># File mos/sdk/v1/client.rb, line 141</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">GetPasswordData</span>(<span class="ruby-identifier">iid</span>, <span class="ruby-identifier">key_file</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">kwargs</span> = {}
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
+  <span class="ruby-identifier">val</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;GetPasswordData&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">val</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&#39;passwordData&#39;</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">val</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-string">&#39;keypairName&#39;</span>)
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">key_file</span>.<span class="ruby-identifier">nil?</span>
+      <span class="ruby-identifier">raise</span> <span class="ruby-constant">Exception</span>(<span class="ruby-string">&#39;Password is encrypted, please specify private key of keypair %s&#39;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">val</span>[<span class="ruby-string">&#39;keypairName&#39;</span>])
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">begin</span>
+        <span class="ruby-identifier">f</span> = <span class="ruby-identifier">open</span>(<span class="ruby-identifier">key_file</span>)
+      <span class="ruby-keyword">rescue</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">&#39;fail to open file&#39;</span>
+        <span class="ruby-identifier">exit</span>(<span class="ruby-value">-1</span>)
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-identifier">key</span> = <span class="ruby-identifier">f</span>.<span class="ruby-identifier">read</span>()
+      <span class="ruby-identifier">f</span>.<span class="ruby-identifier">close</span>()
+      <span class="ruby-comment">#todo   decrypt_base64  待测</span>
+      <span class="ruby-comment">#val[&#39;passwordData&#39;] = utils.decrypt_base64(key, val[&#39;passwordData&#39;])</span>
+      <span class="ruby-comment"># val[&#39;passwordData&#39;]</span>
+      <span class="ruby-identifier">val</span>[<span class="ruby-string">&#39;passwordData&#39;</span>]=<span class="ruby-constant">Base64</span>.<span class="ruby-identifier">decode64</span>(
+          <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">HMAC</span>.<span class="ruby-identifier">digest</span>(<span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">Digest</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;sha256&#39;</span>), <span class="ruby-keyword">self</span>.<span class="ruby-identifier">secret</span>, <span class="ruby-identifier">val</span>[<span class="ruby-string">&#39;passwordData&#39;</span>])
+      ).<span class="ruby-identifier">strip</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">val</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-ImportKeyPair" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">ImportKeyPair</span><span
+            class="method-args">(name, pubkey)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>导入一个用户的SSH公钥，并创建一个SSH密钥对</p>
+<ul><li>
+<p>@param [String] name 密钥对名称</p>
+</li><li>
+<p>@param [String] pubkey SSH公钥信息</p>
+</li><li>
+<p>@return [Hash] 创建的SSH密钥对信息</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="ImportKeyPair-source">
+            <pre><span class="ruby-comment"># File mos/sdk/v1/client.rb, line 276</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">ImportKeyPair</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">pubkey</span>)
+  <span class="ruby-identifier">kwargs</span> = {}
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;KeyName&#39;</span>] = <span class="ruby-identifier">name</span>
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;PublicKeyMaterial&#39;</span>] = <span class="ruby-identifier">pubkey</span>
+  <span class="ruby-identifier">val</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;ImportKeyPair&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
+  <span class="ruby-identifier">val</span>[<span class="ruby-string">&#39;KeyPair&#39;</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-PutInstanceMetadata" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">PutInstanceMetadata</span><span
+            class="method-args">(iid, data)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>修改虚拟机的metadata</p>
+<ul><li>
+<p>@param [String] iid 虚拟机ID</p>
+</li><li>
+<p>@param [Hash] data  需要增加或修改的metadata信息</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="PutInstanceMetadata-source">
+            <pre><span class="ruby-comment"># File mos/sdk/v1/client.rb, line 246</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">PutInstanceMetadata</span>(<span class="ruby-identifier">iid</span>, <span class="ruby-identifier">data</span>)
+  <span class="ruby-identifier">kwargs</span> = {}
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
+  <span class="ruby-identifier">names</span> = []
+  <span class="ruby-identifier">values</span> = []
+  <span class="ruby-identifier">data</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">value</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">names</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">key</span>)
+    <span class="ruby-identifier">values</span>.<span class="ruby-identifier">push</span>(<span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;Name&#39;</span>] = <span class="ruby-identifier">names</span>
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;Value&#39;</span>] = <span class="ruby-identifier">values</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;PutInstanceMetadata&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-RebootInstance" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">RebootInstance</span><span
+            class="method-args">(iid)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>重启虚拟机</p>
+<ul><li>
+<p>@param [String] iid 虚拟机ID</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="RebootInstance-source">
+            <pre><span class="ruby-comment"># File mos/sdk/v1/client.rb, line 189</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">RebootInstance</span>(<span class="ruby-identifier">iid</span>)
+  <span class="ruby-identifier">kwargs</span> = {}
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;RebootInstance&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-RebuildInstanceRootImage" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">RebuildInstanceRootImage</span><span
+            class="method-args">(iid, image_id=nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>重置虚拟机系统磁盘</p>
+<ul><li>
+<p>@param [String] iid 虚拟机ID</p>
+</li><li>
+<p>@param [String] image_id 将虚拟机系统磁盘用指定镜像模板重置，如果无该参数，则使用原镜像模板重置</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="RebuildInstanceRootImage-source">
+            <pre><span class="ruby-comment"># File mos/sdk/v1/client.rb, line 206</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">RebuildInstanceRootImage</span>(<span class="ruby-identifier">iid</span>, <span class="ruby-identifier">image_id</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">kwargs</span> = {}
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;ImageId&#39;</span>] = <span class="ruby-identifier">image_id</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span>(<span class="ruby-identifier">image_id</span>.<span class="ruby-identifier">nil?</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">image_id</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;RebuildInstanceRootImage&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-RenewInstance" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">RenewInstance</span><span
+            class="method-args">(iid, duration=nil)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>虚拟机租期续费</p>
+<ul><li>
+<p>@param [String] iid</p>
+</li><li>
+<p>@param [String] duration 续费租期，缺省为&#39;1M&#39;，即一个月</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="RenewInstance-source">
+            <pre><span class="ruby-comment"># File mos/sdk/v1/client.rb, line 84</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">RenewInstance</span>(<span class="ruby-identifier">iid</span>, <span class="ruby-identifier">duration</span>=<span class="ruby-keyword">nil</span>)
+  <span class="ruby-identifier">kwargs</span> = {}
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
+  <span class="ruby-keyword">unless</span> <span class="ruby-identifier">duration</span>.<span class="ruby-identifier">nil?</span>
+    (<span class="ruby-regexp">/^\d+[HhMm]$/</span>.<span class="ruby-identifier">match</span>(<span class="ruby-identifier">duration</span>)) <span class="ruby-operator">?</span> (<span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;Duration&#39;</span>] = <span class="ruby-identifier">duration</span>) <span class="ruby-operator">:</span> (<span class="ruby-identifier">raise</span> <span class="ruby-constant">Exception</span>(<span class="ruby-string">&quot;Illegal duration %s&quot;</span> <span class="ruby-operator">%</span> <span class="ruby-identifier">duration</span>))
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;RenewInstance&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-StartInstance" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">StartInstance</span><span
+            class="method-args">(iid)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>启动虚拟机</p>
+<ul><li>
+<p>@param [String] iid 虚拟机ID</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="StartInstance-source">
+            <pre><span class="ruby-comment"># File mos/sdk/v1/client.rb, line 171</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">StartInstance</span>(<span class="ruby-identifier">iid</span>)
+  <span class="ruby-identifier">kwargs</span> = {}
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;StartInstance&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-StopInstance" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">StopInstance</span><span
+            class="method-args">(iid, force=false)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>停止虚拟机</p>
+<ul><li>
+<p>@param [String] iid 虚拟机ID</p>
+</li><li>
+<p>@param [Symbol] force 是否强制停止虚拟机</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="StopInstance-source">
+            <pre><span class="ruby-comment"># File mos/sdk/v1/client.rb, line 180</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">StopInstance</span>(<span class="ruby-identifier">iid</span>, <span class="ruby-identifier">force</span>=<span class="ruby-keyword">false</span>)
+  <span class="ruby-identifier">kwargs</span> = {}
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;Force&#39;</span>] = <span class="ruby-identifier">force</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">force</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;StopInstance&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-TerminateInstance" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">TerminateInstance</span><span
+            class="method-args">(iid)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>删除虚拟机</p>
+<ul><li>
+<p>@param [String] iid 虚拟机ID</p>
+</li></ul>
+          
+          
+
+          
+          <div class="method-source-code" id="TerminateInstance-source">
+            <pre><span class="ruby-comment"># File mos/sdk/v1/client.rb, line 197</span>
+<span class="ruby-keyword">def</span> <span class="ruby-constant">TerminateInstance</span>(<span class="ruby-identifier">iid</span>)
+  <span class="ruby-identifier">kwargs</span> = {}
+  <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
+  <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;TerminateInstance&#39;</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
