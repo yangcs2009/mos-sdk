@@ -77,57 +77,57 @@
     
     <li ><a href="#method-i-teardown">#teardown</a>
     
-    <li ><a href="#method-i-test_ChangeInstanceType">#test_ChangeInstanceType</a>
+    <li ><a href="#method-i-test_change_instance_type">#test_change_instance_type</a>
     
-    <li ><a href="#method-i-test_CreateInstance">#test_CreateInstance</a>
+    <li ><a href="#method-i-test_create_instance">#test_create_instance</a>
     
-    <li ><a href="#method-i-test_CreateTemplate">#test_CreateTemplate</a>
+    <li ><a href="#method-i-test_create_template">#test_create_template</a>
     
-    <li ><a href="#method-i-test_DeleteKeyPair">#test_DeleteKeyPair</a>
+    <li ><a href="#method-i-test_delete_key_pair">#test_delete_key_pair</a>
     
-    <li ><a href="#method-i-test_DeleteTemplate">#test_DeleteTemplate</a>
+    <li ><a href="#method-i-test_delete_template">#test_delete_template</a>
     
-    <li ><a href="#method-i-test_DescribeInstanceNetworkInterfaces">#test_DescribeInstanceNetworkInterfaces</a>
+    <li ><a href="#method-i-test_describe_instance_status">#test_describe_instance_status</a>
     
-    <li ><a href="#method-i-test_DescribeInstanceStatus">#test_DescribeInstanceStatus</a>
+    <li ><a href="#method-i-test_describe_instance_types">#test_describe_instance_types</a>
     
-    <li ><a href="#method-i-test_DescribeInstanceTypes">#test_DescribeInstanceTypes</a>
+    <li ><a href="#method-i-test_describe_instance_volumes">#test_describe_instance_volumes</a>
     
-    <li ><a href="#method-i-test_DescribeInstanceVolumes">#test_DescribeInstanceVolumes</a>
+    <li ><a href="#method-i-test_describe_instances">#test_describe_instances</a>
     
-    <li ><a href="#method-i-test_DescribeInstances">#test_DescribeInstances</a>
+    <li ><a href="#method-i-test_describe_key_pairs">#test_describe_key_pairs</a>
     
-    <li ><a href="#method-i-test_DescribeKeyPairs">#test_DescribeKeyPairs</a>
+    <li ><a href="#method-i-test_describe_network_interfaces">#test_describe_network_interfaces</a>
     
-    <li ><a href="#method-i-test_DescribeTemplates">#test_DescribeTemplates</a>
+    <li ><a href="#method-i-test_describe_templates">#test_describe_templates</a>
     
-    <li ><a href="#method-i-test_GetBalance">#test_GetBalance</a>
+    <li ><a href="#method-i-test_get_balance">#test_get_balance</a>
     
-    <li ><a href="#method-i-test_GetInstanceContractInfo">#test_GetInstanceContractInfo</a>
+    <li ><a href="#method-i-test_get_instance_contract_info">#test_get_instance_contract_info</a>
     
-    <li ><a href="#method-i-test_GetInstanceMetadata">#test_GetInstanceMetadata</a>
+    <li ><a href="#method-i-test_get_instance_metadata">#test_get_instance_metadata</a>
     
-    <li ><a href="#method-i-test_GetPasswordData">#test_GetPasswordData</a>
+    <li ><a href="#method-i-test_get_password_data">#test_get_password_data</a>
     
-    <li ><a href="#method-i-test_ImportKeyPair">#test_ImportKeyPair</a>
+    <li ><a href="#method-i-test_import_key_pair">#test_import_key_pair</a>
     
-    <li ><a href="#method-i-test_PutInstanceMetadata">#test_PutInstanceMetadata</a>
+    <li ><a href="#method-i-test_put_instance_metadata">#test_put_instance_metadata</a>
     
-    <li ><a href="#method-i-test_RebootInstance">#test_RebootInstance</a>
+    <li ><a href="#method-i-test_reboot_instance">#test_reboot_instance</a>
     
-    <li ><a href="#method-i-test_RebuildInstanceRootImage">#test_RebuildInstanceRootImage</a>
+    <li ><a href="#method-i-test_rebuild_instance_root_image">#test_rebuild_instance_root_image</a>
     
-    <li ><a href="#method-i-test_RebuildInstanceRootImage1">#test_RebuildInstanceRootImage1</a>
+    <li ><a href="#method-i-test_rebuild_instance_root_image1">#test_rebuild_instance_root_image1</a>
     
-    <li ><a href="#method-i-test_RenewInstance">#test_RenewInstance</a>
+    <li ><a href="#method-i-test_renew_instance">#test_renew_instance</a>
     
-    <li ><a href="#method-i-test_RenewInstance1">#test_RenewInstance1</a>
+    <li ><a href="#method-i-test_renew_instance1">#test_renew_instance1</a>
     
-    <li ><a href="#method-i-test_StartInstance">#test_StartInstance</a>
+    <li ><a href="#method-i-test_start_instance">#test_start_instance</a>
     
-    <li ><a href="#method-i-test_StopInstance">#test_StopInstance</a>
+    <li ><a href="#method-i-test_stop_instance">#test_stop_instance</a>
     
-    <li ><a href="#method-i-test_TerminateInstance">#test_TerminateInstance</a>
+    <li ><a href="#method-i-test_terminate_instance">#test_terminate_instance</a>
     
   </ul>
 </div>
@@ -188,10 +188,10 @@ information.</p>
             <pre><span class="ruby-comment"># File test/api_test.rb, line 10</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">setup</span>
   <span class="ruby-comment"># mos</span>
-  <span class="ruby-ivar">@c</span> = <span class="ruby-constant">Client</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;c9b13af321f247a496f925d70ce001b3&#39;</span>, <span class="ruby-string">&#39;7013bacdb1d44e0a851aa8786f742596&#39;</span>, <span class="ruby-string">&#39;https://192.168.2.33:8883&#39;</span>)
+  <span class="ruby-ivar">@cli</span> = <span class="ruby-constant">Client</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;c9b13af321f247a496f925d70ce001b3&#39;</span>, <span class="ruby-string">&#39;7013bacdb1d44e0a851aa8786f742596&#39;</span>, <span class="ruby-string">&#39;https://192.168.2.33:8883&#39;</span>)
 
   <span class="ruby-comment"># 开发机</span>
-  <span class="ruby-ivar">@c1</span> = <span class="ruby-constant">Client</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;8a29d475dc804ac6b1f335a2b96e5200&#39;</span>, <span class="ruby-string">&#39;41229efa5a074c9190d1f8b3d6948e33&#39;</span>, <span class="ruby-string">&#39;https://192.168.4.249:8883&#39;</span>)
+  <span class="ruby-ivar">@cli1</span> = <span class="ruby-constant">Client</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;8a29d475dc804ac6b1f335a2b96e5200&#39;</span>, <span class="ruby-string">&#39;41229efa5a074c9190d1f8b3d6948e33&#39;</span>, <span class="ruby-string">&#39;https://192.168.4.249:8883&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -237,10 +237,10 @@ information.</p>
       </div>
 
     
-      <div id="method-i-test_ChangeInstanceType" class="method-detail ">
+      <div id="method-i-test_change_instance_type" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">test_ChangeInstanceType</span><span
+          <span class="method-name">test_change_instance_type</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -265,9 +265,9 @@ information.</p>
           
 
           
-          <div class="method-source-code" id="test_ChangeInstanceType-source">
+          <div class="method-source-code" id="test_change_instance_type-source">
             <pre><span class="ruby-comment"># File test/api_test.rb, line 475</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_ChangeInstanceType</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_change_instance_type</span>
   <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;Instance&quot;</span> =<span class="ruby-operator">&gt;</span>
                     {<span class="ruby-string">&quot;status&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;disk&quot;</span>,
                      <span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;b93f75e4-9051-45c5-b43d-85737d97a3b6&quot;</span>,
@@ -277,7 +277,7 @@ information.</p>
                      <span class="ruby-string">&quot;ipAddresses&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;192.168.4.108&quot;</span>,
                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;2048&quot;</span>,
                      <span class="ruby-string">&quot;instanceName&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;ubuntu12&quot;</span>,
-                     <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;2&quot;</span>}}, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">ChangeInstanceType</span>(<span class="ruby-string">&#39;9ffcf106-1c4f-4748-b54e-94aeedc03a0d&#39;</span>, <span class="ruby-string">&#39;C2_M2&#39;</span>, <span class="ruby-identifier">duration</span> = <span class="ruby-string">&#39;2M&#39;</span>, <span class="ruby-identifier">datadisk</span>=<span class="ruby-value">10</span>, <span class="ruby-identifier">bandwidth</span>=<span class="ruby-value">3</span>), <span class="ruby-string">&#39;test_ChangeInstanceType failed!&#39;</span>)
+                     <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;2&quot;</span>}}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">change_instance_type</span>(<span class="ruby-string">&#39;9ffcf106-1c4f-4748-b54e-94aeedc03a0d&#39;</span>, <span class="ruby-string">&#39;C2_M2&#39;</span>, <span class="ruby-identifier">duration</span> = <span class="ruby-string">&#39;2M&#39;</span>, <span class="ruby-identifier">datadisk</span>=<span class="ruby-value">10</span>, <span class="ruby-identifier">bandwidth</span>=<span class="ruby-value">3</span>), <span class="ruby-string">&#39;test_change_instance_type failed!&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -289,10 +289,10 @@ information.</p>
       </div>
 
     
-      <div id="method-i-test_CreateInstance" class="method-detail ">
+      <div id="method-i-test_create_instance" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">test_CreateInstance</span><span
+          <span class="method-name">test_create_instance</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -307,9 +307,9 @@ information.</p>
           
 
           
-          <div class="method-source-code" id="test_CreateInstance-source">
+          <div class="method-source-code" id="test_create_instance-source">
             <pre><span class="ruby-comment"># File test/api_test.rb, line 446</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_CreateInstance</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_create_instance</span>
   <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;Instance&quot;</span> =<span class="ruby-operator">&gt;</span>
                     {<span class="ruby-string">&quot;status&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;schedule&quot;</span>,
                      <span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;026745cb-b4e0-403c-9fa0-ff97f9293a0a&quot;</span>,
@@ -318,7 +318,7 @@ information.</p>
                      <span class="ruby-string">&quot;ipAddresses&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-keyword">nil</span>,
                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;1024&quot;</span>,
                      <span class="ruby-string">&quot;instanceName&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;yangchangsheng&quot;</span>,
-                     <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C1_M1&quot;</span>}}, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">CreateInstance</span>(<span class="ruby-string">&#39;fa1026fe-c082-4ead-8458-802bf65ca64c&#39;</span>, <span class="ruby-string">&#39;C1_M1&#39;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">datadisk</span>=<span class="ruby-value">9</span>, <span class="ruby-identifier">bandwidth</span>=<span class="ruby-value">2</span>), <span class="ruby-string">&#39;test_CreateInstance failed!&#39;</span>)
+                     <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C1_M1&quot;</span>}}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">create_instance</span>(<span class="ruby-string">&#39;fa1026fe-c082-4ead-8458-802bf65ca64c&#39;</span>, <span class="ruby-string">&#39;C1_M1&#39;</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-keyword">nil</span>, <span class="ruby-identifier">datadisk</span>=<span class="ruby-value">9</span>, <span class="ruby-identifier">bandwidth</span>=<span class="ruby-value">2</span>), <span class="ruby-string">&#39;test_create_instance failed!&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -330,10 +330,10 @@ information.</p>
       </div>
 
     
-      <div id="method-i-test_CreateTemplate" class="method-detail ">
+      <div id="method-i-test_create_template" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">test_CreateTemplate</span><span
+          <span class="method-name">test_create_template</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -348,10 +348,10 @@ information.</p>
           
 
           
-          <div class="method-source-code" id="test_CreateTemplate-source">
-            <pre><span class="ruby-comment"># File test/api_test.rb, line 528</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_CreateTemplate</span>
-  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">CreateTemplate</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>,<span class="ruby-string">&#39;templateDemo&#39;</span>), <span class="ruby-string">&#39;test_CreateTemplate failed!&#39;</span>)
+          <div class="method-source-code" id="test_create_template-source">
+            <pre><span class="ruby-comment"># File test/api_test.rb, line 517</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_create_template</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">create_template</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>, <span class="ruby-string">&#39;templateDemo&#39;</span>), <span class="ruby-string">&#39;test_create_template failed!&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -363,10 +363,10 @@ information.</p>
       </div>
 
     
-      <div id="method-i-test_DeleteKeyPair" class="method-detail ">
+      <div id="method-i-test_delete_key_pair" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">test_DeleteKeyPair</span><span
+          <span class="method-name">test_delete_key_pair</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -381,10 +381,10 @@ information.</p>
           
 
           
-          <div class="method-source-code" id="test_DeleteKeyPair-source">
-            <pre><span class="ruby-comment"># File test/api_test.rb, line 524</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_DeleteKeyPair</span>
-  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">DeleteKeyPair</span>(<span class="ruby-string">&#39;key_id&#39;</span>), <span class="ruby-string">&#39;test_DeleteKeyPair failed!&#39;</span>)
+          <div class="method-source-code" id="test_delete_key_pair-source">
+            <pre><span class="ruby-comment"># File test/api_test.rb, line 513</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_delete_key_pair</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">delete_key_pair</span>(<span class="ruby-string">&#39;key_id&#39;</span>), <span class="ruby-string">&#39;test_delete_key_pair failed!&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -396,10 +396,10 @@ information.</p>
       </div>
 
     
-      <div id="method-i-test_DeleteTemplate" class="method-detail ">
+      <div id="method-i-test_delete_template" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">test_DeleteTemplate</span><span
+          <span class="method-name">test_delete_template</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -414,10 +414,10 @@ information.</p>
           
 
           
-          <div class="method-source-code" id="test_DeleteTemplate-source">
-            <pre><span class="ruby-comment"># File test/api_test.rb, line 532</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_DeleteTemplate</span>
-  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">DeleteTemplate</span>(<span class="ruby-string">&#39;1864494f-27f2-46ae-99dc-452962d4288c&#39;</span>), <span class="ruby-string">&#39;test_DeleteTemplate failed!&#39;</span>)
+          <div class="method-source-code" id="test_delete_template-source">
+            <pre><span class="ruby-comment"># File test/api_test.rb, line 521</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_delete_template</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">delete_template</span>(<span class="ruby-string">&#39;1864494f-27f2-46ae-99dc-452962d4288c&#39;</span>), <span class="ruby-string">&#39;test_delete_template failed!&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -429,10 +429,10 @@ information.</p>
       </div>
 
     
-      <div id="method-i-test_DescribeInstanceNetworkInterfaces" class="method-detail ">
+      <div id="method-i-test_describe_instance_status" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">test_DescribeInstanceNetworkInterfaces</span><span
+          <span class="method-name">test_describe_instance_status</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -447,52 +447,10 @@ information.</p>
           
 
           
-          <div class="method-source-code" id="test_DescribeInstanceNetworkInterfaces-source">
-            <pre><span class="ruby-comment"># File test/api_test.rb, line 396</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_DescribeInstanceNetworkInterfaces</span>
-  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;InstanceNetworkInterface&quot;</span>=<span class="ruby-operator">&gt;</span>
-                    {<span class="ruby-string">&quot;networkId&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;c67a00f2-ce17-4f2a-b536-4ffad46b89f3&quot;</span>,
-                     <span class="ruby-string">&quot;index&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;0&quot;</span>,
-                     <span class="ruby-string">&quot;macAddress&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;00:22:16:d5:f1:78&quot;</span>,
-                     <span class="ruby-string">&quot;instanceId&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;860832f1-99b8-4715-a64f-49ce53387532&quot;</span>,
-                     <span class="ruby-string">&quot;instanceName&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;demo&quot;</span>,
-                     <span class="ruby-string">&quot;driver&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;virtio&quot;</span>,
-                     <span class="ruby-string">&quot;bandwidth&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;100&quot;</span>,
-                     <span class="ruby-string">&quot;networkName&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;vnet4&quot;</span>,
-                     <span class="ruby-string">&quot;ipAddress&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;192.168.4.249&quot;</span>}}, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">DescribeInstanceNetworkInterfaces</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>), <span class="ruby-string">&#39;test_DescribeInstanceNetworkInterfaces failed!&#39;</span>)
-<span class="ruby-keyword">end</span></pre>
-          </div>
-          
-        </div>
-
-        
-
-        
-      </div>
-
-    
-      <div id="method-i-test_DescribeInstanceStatus" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">test_DescribeInstanceStatus</span><span
-            class="method-args">()</span>
-          
-          <span class="method-click-advice">click to toggle source</span>
-          
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
-          
-
-          
-          <div class="method-source-code" id="test_DescribeInstanceStatus-source">
+          <div class="method-source-code" id="test_describe_instance_status-source">
             <pre><span class="ruby-comment"># File test/api_test.rb, line 423</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_DescribeInstanceStatus</span>
-  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;status&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;running&quot;</span>}, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">DescribeInstanceStatus</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>), <span class="ruby-string">&#39;test_DescribeInstanceStatus failed!&#39;</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_describe_instance_status</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;status&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;running&quot;</span>}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">describe_instance_status</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>), <span class="ruby-string">&#39;test_describe_instance_status failed!&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -504,10 +462,10 @@ information.</p>
       </div>
 
     
-      <div id="method-i-test_DescribeInstanceTypes" class="method-detail ">
+      <div id="method-i-test_describe_instance_types" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">test_DescribeInstanceTypes</span><span
+          <span class="method-name">test_describe_instance_types</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -522,9 +480,9 @@ information.</p>
           
 
           
-          <div class="method-source-code" id="test_DescribeInstanceTypes-source">
+          <div class="method-source-code" id="test_describe_instance_types-source">
             <pre><span class="ruby-comment"># File test/api_test.rb, line 25</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_DescribeInstanceTypes</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_describe_instance_types</span>
   <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;InstanceType&quot;</span> =<span class="ruby-operator">&gt;</span>
                     [{<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;5a96d81a-ee1a-48be-b65b-85fe5cf6d1bb&quot;</span>,
                       <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
@@ -763,7 +721,7 @@ information.</p>
                       <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;1&quot;</span>,
                       <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
                       <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;1024&quot;</span>,
-                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;S&quot;</span>}]}, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">DescribeInstanceTypes</span>, <span class="ruby-string">&#39;test_DescribeInstanceTypes failed!&#39;</span>)
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;S&quot;</span>}]}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">describe_instance_types</span>, <span class="ruby-string">&#39;test_describe_instance_types failed!&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -775,10 +733,10 @@ information.</p>
       </div>
 
     
-      <div id="method-i-test_DescribeInstanceVolumes" class="method-detail ">
+      <div id="method-i-test_describe_instance_volumes" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">test_DescribeInstanceVolumes</span><span
+          <span class="method-name">test_describe_instance_volumes</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -793,9 +751,9 @@ information.</p>
           
 
           
-          <div class="method-source-code" id="test_DescribeInstanceVolumes-source">
+          <div class="method-source-code" id="test_describe_instance_volumes-source">
             <pre><span class="ruby-comment"># File test/api_test.rb, line 368</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_DescribeInstanceVolumes</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_describe_instance_volumes</span>
   <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;InstanceVolume&quot;</span> =<span class="ruby-operator">&gt;</span>
                     [{<span class="ruby-string">&quot;index&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
                       <span class="ruby-string">&quot;instanceId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;860832f1-99b8-4715-a64f-49ce53387532&quot;</span>,
@@ -820,7 +778,7 @@ information.</p>
                       <span class="ruby-string">&quot;volumeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;fb17ec7c-8f16-4af0-9933-77ffed5a8295&quot;</span>,
                       <span class="ruby-string">&quot;cacheMode&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;none&quot;</span>,
                       <span class="ruby-string">&quot;volumeSize&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;102400&quot;</span>,
-                      <span class="ruby-string">&quot;instanceName&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;demo&quot;</span>}]}, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">DescribeInstanceVolumes</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>), <span class="ruby-string">&#39;test_DescribeInstanceVolumes failed!&#39;</span>)
+                      <span class="ruby-string">&quot;instanceName&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;demo&quot;</span>}]}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">describe_instance_volumes</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>), <span class="ruby-string">&#39;test_describe_instance_volumes failed!&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -832,10 +790,10 @@ information.</p>
       </div>
 
     
-      <div id="method-i-test_DescribeInstances" class="method-detail ">
+      <div id="method-i-test_describe_instances" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">test_DescribeInstances</span><span
+          <span class="method-name">test_describe_instances</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -850,9 +808,9 @@ information.</p>
           
 
           
-          <div class="method-source-code" id="test_DescribeInstances-source">
+          <div class="method-source-code" id="test_describe_instances-source">
             <pre><span class="ruby-comment"># File test/api_test.rb, line 355</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_DescribeInstances</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_describe_instances</span>
   <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;Instance&quot;</span> =<span class="ruby-operator">&gt;</span>
                     {<span class="ruby-string">&quot;status&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;running&quot;</span>,
                      <span class="ruby-string">&quot;availabilityZoneId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;6f2ca2ed-0ae9-4321-9d82-004783fa2f6c&quot;</span>,
@@ -862,7 +820,7 @@ information.</p>
                      <span class="ruby-string">&quot;ipAddresses&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;192.168.4.249&quot;</span>,
                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;4096&quot;</span>,
                      <span class="ruby-string">&quot;instanceName&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;demo&quot;</span>,
-                     <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;4&quot;</span>}}, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">DescribeInstances</span>, <span class="ruby-string">&#39;test_DescribeInstances failed!&#39;</span>)
+                     <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;4&quot;</span>}}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">describe_instances</span>, <span class="ruby-string">&#39;test_get_balance failed!&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -874,10 +832,10 @@ information.</p>
       </div>
 
     
-      <div id="method-i-test_DescribeKeyPairs" class="method-detail ">
+      <div id="method-i-test_describe_key_pairs" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">test_DescribeKeyPairs</span><span
+          <span class="method-name">test_describe_key_pairs</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -892,10 +850,10 @@ information.</p>
           
 
           
-          <div class="method-source-code" id="test_DescribeKeyPairs-source">
-            <pre><span class="ruby-comment"># File test/api_test.rb, line 499</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_DescribeKeyPairs</span>
-  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">DescribeKeyPairs</span>(), <span class="ruby-string">&#39;test_DescribeKeyPairs failed!&#39;</span>)
+          <div class="method-source-code" id="test_describe_key_pairs-source">
+            <pre><span class="ruby-comment"># File test/api_test.rb, line 488</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_describe_key_pairs</span>
+  <span class="ruby-identifier">assert_equal</span>(<span class="ruby-keyword">nil</span>, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">describe_key_pairs</span>(), <span class="ruby-string">&#39;test_describe_key_pairs failed!&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -907,10 +865,10 @@ information.</p>
       </div>
 
     
-      <div id="method-i-test_DescribeTemplates" class="method-detail ">
+      <div id="method-i-test_describe_network_interfaces" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">test_DescribeTemplates</span><span
+          <span class="method-name">test_describe_network_interfaces</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -925,9 +883,51 @@ information.</p>
           
 
           
-          <div class="method-source-code" id="test_DescribeTemplates-source">
+          <div class="method-source-code" id="test_describe_network_interfaces-source">
+            <pre><span class="ruby-comment"># File test/api_test.rb, line 396</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_describe_network_interfaces</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;InstanceNetworkInterface&quot;</span> =<span class="ruby-operator">&gt;</span>
+                    {<span class="ruby-string">&quot;networkId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;c67a00f2-ce17-4f2a-b536-4ffad46b89f3&quot;</span>,
+                     <span class="ruby-string">&quot;index&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                     <span class="ruby-string">&quot;macAddress&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;00:22:16:d5:f1:78&quot;</span>,
+                     <span class="ruby-string">&quot;instanceId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;860832f1-99b8-4715-a64f-49ce53387532&quot;</span>,
+                     <span class="ruby-string">&quot;instanceName&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;demo&quot;</span>,
+                     <span class="ruby-string">&quot;driver&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;virtio&quot;</span>,
+                     <span class="ruby-string">&quot;bandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;100&quot;</span>,
+                     <span class="ruby-string">&quot;networkName&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;vnet4&quot;</span>,
+                     <span class="ruby-string">&quot;ipAddress&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;192.168.4.249&quot;</span>}}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">describe_network_interfaces</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>), <span class="ruby-string">&#39;test_describe_network_interfaces failed!&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_describe_templates" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_describe_templates</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_describe_templates-source">
             <pre><span class="ruby-comment"># File test/api_test.rb, line 267</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_DescribeTemplates</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_describe_templates</span>
   <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;Template&quot;</span> =<span class="ruby-operator">&gt;</span>
                     [{<span class="ruby-string">&quot;status&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;active&quot;</span>,
                       <span class="ruby-string">&quot;checksum&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;712abaa93900b74de6a7494172aaa458&quot;</span>,
@@ -1008,7 +1008,7 @@ information.</p>
                       <span class="ruby-string">&quot;checksum&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;aa467f9ba7e09d0a8b9d5b242cd6f476&quot;</span>,
                       <span class="ruby-string">&quot;size&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;1189085184&quot;</span>,
                       <span class="ruby-string">&quot;templateName&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;WindowsXP_SP3_X86&quot;</span>,
-                      <span class="ruby-string">&quot;templateId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;30761f7c-6009-4d36-ac7c-962529afcbe8&quot;</span>}]}, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">DescribeTemplates</span>, <span class="ruby-string">&#39;test_DescribeTemplates failed!&#39;</span>)
+                      <span class="ruby-string">&quot;templateId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;30761f7c-6009-4d36-ac7c-962529afcbe8&quot;</span>}]}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">describe_templates</span>, <span class="ruby-string">&#39;test_describe_templates failed!&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -1020,10 +1020,10 @@ information.</p>
       </div>
 
     
-      <div id="method-i-test_GetBalance" class="method-detail ">
+      <div id="method-i-test_get_balance" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">test_GetBalance</span><span
+          <span class="method-name">test_get_balance</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -1038,10 +1038,10 @@ information.</p>
           
 
           
-          <div class="method-source-code" id="test_GetBalance-source">
+          <div class="method-source-code" id="test_get_balance-source">
             <pre><span class="ruby-comment"># File test/api_test.rb, line 351</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_GetBalance</span>
-  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;timestamp&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;2014-12-19T03:06:56Z&quot;</span>, <span class="ruby-string">&quot;balance&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;2400.0&quot;</span>}, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">GetBalance</span>, <span class="ruby-string">&#39;test_GetBalance failed!&#39;</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_get_balance</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;timestamp&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;2014-12-19T03:06:56Z&quot;</span>, <span class="ruby-string">&quot;balance&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;2400.0&quot;</span>}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">get_balance</span>, <span class="ruby-string">&#39;test_GetBalance failed!&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -1053,10 +1053,10 @@ information.</p>
       </div>
 
     
-      <div id="method-i-test_GetInstanceContractInfo" class="method-detail ">
+      <div id="method-i-test_get_instance_contract_info" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">test_GetInstanceContractInfo</span><span
+          <span class="method-name">test_get_instance_contract_info</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -1071,12 +1071,12 @@ information.</p>
           
 
           
-          <div class="method-source-code" id="test_GetInstanceContractInfo-source">
+          <div class="method-source-code" id="test_get_instance_contract_info-source">
             <pre><span class="ruby-comment"># File test/api_test.rb, line 417</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_GetInstanceContractInfo</span>
-  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;startedAt&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;2014-11-25T02:57:00Z&quot;</span>,
-                <span class="ruby-string">&quot;extendTo&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;2016-01-01T02:57:00Z&quot;</span>,
-                <span class="ruby-string">&quot;expireAt&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;2015-12-25T02:57:00Z&quot;</span>}, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">GetInstanceContractInfo</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>), <span class="ruby-string">&#39;test_GetInstanceContractInfo failed!&#39;</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_get_instance_contract_info</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;startedAt&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;2014-11-25T02:57:00Z&quot;</span>,
+                <span class="ruby-string">&quot;extendTo&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;2016-01-01T02:57:00Z&quot;</span>,
+                <span class="ruby-string">&quot;expireAt&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;2015-12-25T02:57:00Z&quot;</span>}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">get_instance_contract_info</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>), <span class="ruby-string">&#39;test_get_instance_contract_info failed!&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -1088,10 +1088,10 @@ information.</p>
       </div>
 
     
-      <div id="method-i-test_GetInstanceMetadata" class="method-detail ">
+      <div id="method-i-test_get_instance_metadata" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">test_GetInstanceMetadata</span><span
+          <span class="method-name">test_get_instance_metadata</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -1106,9 +1106,9 @@ information.</p>
           
 
           
-          <div class="method-source-code" id="test_GetInstanceMetadata-source">
-            <pre><span class="ruby-comment"># File test/api_test.rb, line 488</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_GetInstanceMetadata</span>
+          <div class="method-source-code" id="test_get_instance_metadata-source">
+            <pre><span class="ruby-comment"># File test/api_test.rb, line 492</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_get_instance_metadata</span>
   <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;os_name&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;Linux&quot;</span>,
                 <span class="ruby-string">&quot;os_version&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;6.5&quot;</span>,
                 <span class="ruby-string">&quot;kvm&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;disabled&quot;</span>,
@@ -1116,7 +1116,7 @@ information.</p>
                 <span class="ruby-string">&quot;app_tags&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;io_bound&quot;</span>,
                 <span class="ruby-string">&quot;k2&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;34&quot;</span>,
                 <span class="ruby-string">&quot;storage_type&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;rotational&quot;</span>,
-                <span class="ruby-string">&quot;os_distribution&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;CentOS&quot;</span>}, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">GetInstanceMetadata</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>), <span class="ruby-string">&#39;test_GetInstanceMetadata failed!&#39;</span>)
+                <span class="ruby-string">&quot;os_distribution&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;CentOS&quot;</span>}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">get_instance_metadata</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>), <span class="ruby-string">&#39;test_get_instance_metadata failed!&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -1128,10 +1128,10 @@ information.</p>
       </div>
 
     
-      <div id="method-i-test_GetPasswordData" class="method-detail ">
+      <div id="method-i-test_get_password_data" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">test_GetPasswordData</span><span
+          <span class="method-name">test_get_password_data</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -1146,12 +1146,12 @@ information.</p>
           
 
           
-          <div class="method-source-code" id="test_GetPasswordData-source">
+          <div class="method-source-code" id="test_get_password_data-source">
             <pre><span class="ruby-comment"># File test/api_test.rb, line 427</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_GetPasswordData</span>
-  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;timestamp&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;2014-11-25T02:57:17Z&quot;</span>,
-                <span class="ruby-string">&quot;account&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;root&quot;</span>,
-                <span class="ruby-string">&quot;passwordData&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;BZvHRKw7XbDg&quot;</span>}, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">GetPasswordData</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>), <span class="ruby-string">&#39;test_GetPasswordData failed!&#39;</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_get_password_data</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;timestamp&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;2014-11-25T02:57:17Z&quot;</span>,
+                <span class="ruby-string">&quot;account&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;root&quot;</span>,
+                <span class="ruby-string">&quot;passwordData&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;BZvHRKw7XbDg&quot;</span>}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">get_password_data</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>), <span class="ruby-string">&#39;test_get_password_data failed!&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -1163,10 +1163,10 @@ information.</p>
       </div>
 
     
-      <div id="method-i-test_ImportKeyPair" class="method-detail ">
+      <div id="method-i-test_import_key_pair" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">test_ImportKeyPair</span><span
+          <span class="method-name">test_import_key_pair</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -1181,10 +1181,10 @@ information.</p>
           
 
           
-          <div class="method-source-code" id="test_ImportKeyPair-source">
-            <pre><span class="ruby-comment"># File test/api_test.rb, line 520</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_ImportKeyPair</span>
-  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">ImportKeyPair</span>(<span class="ruby-string">&#39;key_name&#39;</span>,<span class="ruby-string">&#39;public_key&#39;</span>), <span class="ruby-string">&#39;test_ImportKeyPair failed!&#39;</span>)
+          <div class="method-source-code" id="test_import_key_pair-source">
+            <pre><span class="ruby-comment"># File test/api_test.rb, line 509</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_import_key_pair</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">import_key_pair</span>(<span class="ruby-string">&#39;key_name&#39;</span>, <span class="ruby-string">&#39;public_key&#39;</span>), <span class="ruby-string">&#39;test_import_key_pair failed!&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -1196,10 +1196,10 @@ information.</p>
       </div>
 
     
-      <div id="method-i-test_PutInstanceMetadata" class="method-detail ">
+      <div id="method-i-test_put_instance_metadata" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">test_PutInstanceMetadata</span><span
+          <span class="method-name">test_put_instance_metadata</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -1214,10 +1214,10 @@ information.</p>
           
 
           
-          <div class="method-source-code" id="test_PutInstanceMetadata-source">
-            <pre><span class="ruby-comment"># File test/api_test.rb, line 514</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_PutInstanceMetadata</span>
-  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">PutInstanceMetadata</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>,{<span class="ruby-string">&#39;k1&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">11</span>,<span class="ruby-string">&#39;k2&#39;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-value">14</span>}), <span class="ruby-string">&#39;test_PutInstanceMetadata failed!&#39;</span>)
+          <div class="method-source-code" id="test_put_instance_metadata-source">
+            <pre><span class="ruby-comment"># File test/api_test.rb, line 503</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_put_instance_metadata</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">put_instance_metadata</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>, {<span class="ruby-string">&#39;k1&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">11</span>, <span class="ruby-string">&#39;k2&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">14</span>}), <span class="ruby-string">&#39;test_put_instance_metadata failed!&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -1229,10 +1229,10 @@ information.</p>
       </div>
 
     
-      <div id="method-i-test_RebootInstance" class="method-detail ">
+      <div id="method-i-test_reboot_instance" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">test_RebootInstance</span><span
+          <span class="method-name">test_reboot_instance</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -1247,10 +1247,10 @@ information.</p>
           
 
           
-          <div class="method-source-code" id="test_RebootInstance-source">
+          <div class="method-source-code" id="test_reboot_instance-source">
             <pre><span class="ruby-comment"># File test/api_test.rb, line 441</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_RebootInstance</span>
-  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">RebootInstance</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>), <span class="ruby-string">&#39;test_RebootInstance failed!&#39;</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_reboot_instance</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">reboot_instance</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>), <span class="ruby-string">&#39;test_reboot_instance failed!&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -1262,10 +1262,10 @@ information.</p>
       </div>
 
     
-      <div id="method-i-test_RebuildInstanceRootImage" class="method-detail ">
+      <div id="method-i-test_rebuild_instance_root_image" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">test_RebuildInstanceRootImage</span><span
+          <span class="method-name">test_rebuild_instance_root_image</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -1280,10 +1280,10 @@ information.</p>
           
 
           
-          <div class="method-source-code" id="test_RebuildInstanceRootImage-source">
+          <div class="method-source-code" id="test_rebuild_instance_root_image-source">
             <pre><span class="ruby-comment"># File test/api_test.rb, line 462</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_RebuildInstanceRootImage</span>
-  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">RebuildInstanceRootImage</span>(<span class="ruby-string">&#39;8e16d307-70ed-4894-8e7f-dfbe18f30478&#39;</span>), <span class="ruby-string">&#39;test_RebuildInstanceRootImage failed!&#39;</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_rebuild_instance_root_image</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">rebuild_instance_root_image</span>(<span class="ruby-string">&#39;8e16d307-70ed-4894-8e7f-dfbe18f30478&#39;</span>), <span class="ruby-string">&#39;test_rebuild_instance_root_image failed!&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -1295,10 +1295,10 @@ information.</p>
       </div>
 
     
-      <div id="method-i-test_RebuildInstanceRootImage1" class="method-detail ">
+      <div id="method-i-test_rebuild_instance_root_image1" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">test_RebuildInstanceRootImage1</span><span
+          <span class="method-name">test_rebuild_instance_root_image1</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -1313,10 +1313,10 @@ information.</p>
           
 
           
-          <div class="method-source-code" id="test_RebuildInstanceRootImage1-source">
+          <div class="method-source-code" id="test_rebuild_instance_root_image1-source">
             <pre><span class="ruby-comment"># File test/api_test.rb, line 466</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_RebuildInstanceRootImage1</span>
-  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">RebuildInstanceRootImage</span>(<span class="ruby-string">&#39;8e16d307-70ed-4894-8e7f-dfbe18f30478&#39;</span>, <span class="ruby-identifier">image_id</span>=<span class="ruby-string">&#39;30761f7c-6009-4d36-ac7c-962529afcbe8&#39;</span>), <span class="ruby-string">&#39;test_RebuildInstanceRootImage failed!&#39;</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_rebuild_instance_root_image1</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">rebuild_instance_root_image</span>(<span class="ruby-string">&#39;8e16d307-70ed-4894-8e7f-dfbe18f30478&#39;</span>, <span class="ruby-identifier">image_id</span>=<span class="ruby-string">&#39;30761f7c-6009-4d36-ac7c-962529afcbe8&#39;</span>), <span class="ruby-string">&#39;test_rebuild_instance_root_image1 failed!&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -1328,10 +1328,10 @@ information.</p>
       </div>
 
     
-      <div id="method-i-test_RenewInstance" class="method-detail ">
+      <div id="method-i-test_renew_instance" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">test_RenewInstance</span><span
+          <span class="method-name">test_renew_instance</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -1346,10 +1346,10 @@ information.</p>
           
 
           
-          <div class="method-source-code" id="test_RenewInstance-source">
+          <div class="method-source-code" id="test_renew_instance-source">
             <pre><span class="ruby-comment"># File test/api_test.rb, line 409</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_RenewInstance</span>
-  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">RenewInstance</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>), <span class="ruby-string">&#39;test_RenewInstance failed!&#39;</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_renew_instance</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">renew_instance</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>), <span class="ruby-string">&#39;test_renew_instance failed!&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -1361,10 +1361,10 @@ information.</p>
       </div>
 
     
-      <div id="method-i-test_RenewInstance1" class="method-detail ">
+      <div id="method-i-test_renew_instance1" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">test_RenewInstance1</span><span
+          <span class="method-name">test_renew_instance1</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -1379,10 +1379,10 @@ information.</p>
           
 
           
-          <div class="method-source-code" id="test_RenewInstance1-source">
+          <div class="method-source-code" id="test_renew_instance1-source">
             <pre><span class="ruby-comment"># File test/api_test.rb, line 413</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_RenewInstance1</span>
-  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">RenewInstance</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>,<span class="ruby-string">&#39;2M&#39;</span>), <span class="ruby-string">&#39;test_RenewInstance1 failed!&#39;</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_renew_instance1</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">renew_instance</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>, <span class="ruby-string">&#39;2M&#39;</span>), <span class="ruby-string">&#39;test_renew_instance1 failed!&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -1394,10 +1394,10 @@ information.</p>
       </div>
 
     
-      <div id="method-i-test_StartInstance" class="method-detail ">
+      <div id="method-i-test_start_instance" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">test_StartInstance</span><span
+          <span class="method-name">test_start_instance</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -1412,10 +1412,10 @@ information.</p>
           
 
           
-          <div class="method-source-code" id="test_StartInstance-source">
+          <div class="method-source-code" id="test_start_instance-source">
             <pre><span class="ruby-comment"># File test/api_test.rb, line 437</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_StartInstance</span>
-  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">StartInstance</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>), <span class="ruby-string">&#39;test_StartInstance failed!&#39;</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_start_instance</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">start_instance</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>), <span class="ruby-string">&#39;test_start_instance failed!&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -1427,10 +1427,10 @@ information.</p>
       </div>
 
     
-      <div id="method-i-test_StopInstance" class="method-detail ">
+      <div id="method-i-test_stop_instance" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">test_StopInstance</span><span
+          <span class="method-name">test_stop_instance</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -1445,10 +1445,10 @@ information.</p>
           
 
           
-          <div class="method-source-code" id="test_StopInstance-source">
+          <div class="method-source-code" id="test_stop_instance-source">
             <pre><span class="ruby-comment"># File test/api_test.rb, line 433</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_StopInstance</span>
-  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span>=<span class="ruby-operator">&gt;</span><span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">StopInstance</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>), <span class="ruby-string">&#39;test_StopInstance failed!&#39;</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_stop_instance</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">stop_instance</span>(<span class="ruby-string">&#39;860832f1-99b8-4715-a64f-49ce53387532&#39;</span>), <span class="ruby-string">&#39;test_stop_instance failed!&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           
@@ -1460,10 +1460,10 @@ information.</p>
       </div>
 
     
-      <div id="method-i-test_TerminateInstance" class="method-detail ">
+      <div id="method-i-test_terminate_instance" class="method-detail ">
         
         <div class="method-heading">
-          <span class="method-name">test_TerminateInstance</span><span
+          <span class="method-name">test_terminate_instance</span><span
             class="method-args">()</span>
           
           <span class="method-click-advice">click to toggle source</span>
@@ -1478,10 +1478,10 @@ information.</p>
           
 
           
-          <div class="method-source-code" id="test_TerminateInstance-source">
+          <div class="method-source-code" id="test_terminate_instance-source">
             <pre><span class="ruby-comment"># File test/api_test.rb, line 458</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_TerminateInstance</span>
-  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@c</span>.<span class="ruby-constant">TerminateInstance</span>(<span class="ruby-string">&#39;66474718-388f-4cde-a983-fbd610c2041f&#39;</span>), <span class="ruby-string">&#39;test_TerminateInstance failed!&#39;</span>)
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_terminate_instance</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;return&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;True&quot;</span>}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">terminate_instance</span>(<span class="ruby-string">&#39;66474718-388f-4cde-a983-fbd610c2041f&#39;</span>), <span class="ruby-string">&#39;test_terminate_instance failed!&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
           

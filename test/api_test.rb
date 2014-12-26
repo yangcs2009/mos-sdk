@@ -9,10 +9,10 @@ class ApiTest < Test::Unit::TestCase
   # to set up fixture information.
   def setup
     # mos
-    @c = Client.new('c9b13af321f247a496f925d70ce001b3', '7013bacdb1d44e0a851aa8786f742596', 'https://192.168.2.33:8883')
+    @cli = Client.new('c9b13af321f247a496f925d70ce001b3', '7013bacdb1d44e0a851aa8786f742596', 'https://192.168.2.33:8883')
 
     # 开发机
-    @c1 = Client.new('8a29d475dc804ac6b1f335a2b96e5200', '41229efa5a074c9190d1f8b3d6948e33', 'https://192.168.4.249:8883')
+    @cli1 = Client.new('8a29d475dc804ac6b1f335a2b96e5200', '41229efa5a074c9190d1f8b3d6948e33', 'https://192.168.4.249:8883')
   end
 
   # Called after every test method runs. Can be used to tear
@@ -261,7 +261,7 @@ class ApiTest < Test::Unit::TestCase
                         "cpu" => "1",
                         "volume" => "0",
                         "memory" => "1024",
-                        "instanceType" => "S"}]}, @c.describe_instance_types, 'test_describe_instance_types failed!')
+                        "instanceType" => "S"}]}, @cli.describe_instance_types, 'test_describe_instance_types failed!')
   end
 
   def test_describe_templates
@@ -345,11 +345,11 @@ class ApiTest < Test::Unit::TestCase
                         "checksum" => "aa467f9ba7e09d0a8b9d5b242cd6f476",
                         "size" => "1189085184",
                         "templateName" => "WindowsXP_SP3_X86",
-                        "templateId" => "30761f7c-6009-4d36-ac7c-962529afcbe8"}]}, @c.describe_templates, 'test_describe_templates failed!')
+                        "templateId" => "30761f7c-6009-4d36-ac7c-962529afcbe8"}]}, @cli.describe_templates, 'test_describe_templates failed!')
   end
 
   def test_get_balance
-    assert_equal({"timestamp" => "2014-12-19T03:06:56Z", "balance" => "2400.0"}, @c.get_balance, 'test_GetBalance failed!')
+    assert_equal({"timestamp" => "2014-12-19T03:06:56Z", "balance" => "2400.0"}, @cli.get_balance, 'test_GetBalance failed!')
   end
 
   def test_describe_instances
@@ -362,7 +362,7 @@ class ApiTest < Test::Unit::TestCase
                        "ipAddresses" => "192.168.4.249",
                        "memory" => "4096",
                        "instanceName" => "demo",
-                       "cpu" => "4"}}, @c.describe_instances, 'test_get_balance failed!')
+                       "cpu" => "4"}}, @cli.describe_instances, 'test_get_balance failed!')
   end
 
   def test_describe_instance_volumes
@@ -390,7 +390,7 @@ class ApiTest < Test::Unit::TestCase
                         "volumeId" => "fb17ec7c-8f16-4af0-9933-77ffed5a8295",
                         "cacheMode" => "none",
                         "volumeSize" => "102400",
-                        "instanceName" => "demo"}]}, @c.describe_instance_volumes('860832f1-99b8-4715-a64f-49ce53387532'), 'test_describe_instance_volumes failed!')
+                        "instanceName" => "demo"}]}, @cli.describe_instance_volumes('860832f1-99b8-4715-a64f-49ce53387532'), 'test_describe_instance_volumes failed!')
   end
 
   def test_describe_network_interfaces
@@ -403,43 +403,43 @@ class ApiTest < Test::Unit::TestCase
                        "driver" => "virtio",
                        "bandwidth" => "100",
                        "networkName" => "vnet4",
-                       "ipAddress" => "192.168.4.249"}}, @c.describe_network_interfaces('860832f1-99b8-4715-a64f-49ce53387532'), 'test_describe_network_interfaces failed!')
+                       "ipAddress" => "192.168.4.249"}}, @cli.describe_network_interfaces('860832f1-99b8-4715-a64f-49ce53387532'), 'test_describe_network_interfaces failed!')
   end
 
   def test_renew_instance
-    assert_equal({"return" => "True"}, @c.renew_instance('860832f1-99b8-4715-a64f-49ce53387532'), 'test_renew_instance failed!')
+    assert_equal({"return" => "True"}, @cli.renew_instance('860832f1-99b8-4715-a64f-49ce53387532'), 'test_renew_instance failed!')
   end
 
   def test_renew_instance1
-    assert_equal({"return" => "True"}, @c.renew_instance('860832f1-99b8-4715-a64f-49ce53387532', '2M'), 'test_renew_instance1 failed!')
+    assert_equal({"return" => "True"}, @cli.renew_instance('860832f1-99b8-4715-a64f-49ce53387532', '2M'), 'test_renew_instance1 failed!')
   end
 
   def test_get_instance_contract_info
     assert_equal({"startedAt" => "2014-11-25T02:57:00Z",
                   "extendTo" => "2016-01-01T02:57:00Z",
-                  "expireAt" => "2015-12-25T02:57:00Z"}, @c.get_instance_contract_info('860832f1-99b8-4715-a64f-49ce53387532'), 'test_get_instance_contract_info failed!')
+                  "expireAt" => "2015-12-25T02:57:00Z"}, @cli.get_instance_contract_info('860832f1-99b8-4715-a64f-49ce53387532'), 'test_get_instance_contract_info failed!')
   end
 
   def test_describe_instance_status
-    assert_equal({"status" => "running"}, @c.describe_instance_status('860832f1-99b8-4715-a64f-49ce53387532'), 'test_describe_instance_status failed!')
+    assert_equal({"status" => "running"}, @cli.describe_instance_status('860832f1-99b8-4715-a64f-49ce53387532'), 'test_describe_instance_status failed!')
   end
 
   def test_get_password_data
     assert_equal({"timestamp" => "2014-11-25T02:57:17Z",
                   "account" => "root",
-                  "passwordData" => "BZvHRKw7XbDg"}, @c.get_password_data('860832f1-99b8-4715-a64f-49ce53387532'), 'test_get_password_data failed!')
+                  "passwordData" => "BZvHRKw7XbDg"}, @cli.get_password_data('860832f1-99b8-4715-a64f-49ce53387532'), 'test_get_password_data failed!')
   end
 
   def test_stop_instance
-    assert_equal({"return" => "True"}, @c.stop_instance('860832f1-99b8-4715-a64f-49ce53387532'), 'test_stop_instance failed!')
+    assert_equal({"return" => "True"}, @cli.stop_instance('860832f1-99b8-4715-a64f-49ce53387532'), 'test_stop_instance failed!')
   end
 
   def test_start_instance
-    assert_equal({"return" => "True"}, @c.start_instance('860832f1-99b8-4715-a64f-49ce53387532'), 'test_start_instance failed!')
+    assert_equal({"return" => "True"}, @cli.start_instance('860832f1-99b8-4715-a64f-49ce53387532'), 'test_start_instance failed!')
   end
 
   def test_reboot_instance
-    assert_equal({"return" => "True"}, @c.reboot_instance('860832f1-99b8-4715-a64f-49ce53387532'), 'test_reboot_instance failed!')
+    assert_equal({"return" => "True"}, @cli.reboot_instance('860832f1-99b8-4715-a64f-49ce53387532'), 'test_reboot_instance failed!')
   end
 
   # 省略datadisk、bandwidth无法创建，因为每次创建虚机id不同，assert_equal无法为真，只要创建成功即可
@@ -452,19 +452,19 @@ class ApiTest < Test::Unit::TestCase
                        "ipAddresses" => nil,
                        "memory" => "1024",
                        "instanceName" => "yangchangsheng",
-                       "instanceType" => "C1_M1"}}, @c.create_instance('fa1026fe-c082-4ead-8458-802bf65ca64c', 'C1_M1', nil, nil, nil, datadisk=9, bandwidth=2), 'test_create_instance failed!')
+                       "instanceType" => "C1_M1"}}, @cli.create_instance('fa1026fe-c082-4ead-8458-802bf65ca64c', 'C1_M1', nil, nil, nil, datadisk=9, bandwidth=2), 'test_create_instance failed!')
   end
 
   def test_terminate_instance
-    assert_equal({"return" => "True"}, @c.terminate_instance('66474718-388f-4cde-a983-fbd610c2041f'), 'test_terminate_instance failed!')
+    assert_equal({"return" => "True"}, @cli.terminate_instance('66474718-388f-4cde-a983-fbd610c2041f'), 'test_terminate_instance failed!')
   end
 
   def test_rebuild_instance_root_image
-    assert_equal({"return" => "True"}, @c.rebuild_instance_root_image('8e16d307-70ed-4894-8e7f-dfbe18f30478'), 'test_rebuild_instance_root_image failed!')
+    assert_equal({"return" => "True"}, @cli.rebuild_instance_root_image('8e16d307-70ed-4894-8e7f-dfbe18f30478'), 'test_rebuild_instance_root_image failed!')
   end
 
   def test_rebuild_instance_root_image1
-    assert_equal({"return" => "True"}, @c.rebuild_instance_root_image('8e16d307-70ed-4894-8e7f-dfbe18f30478', image_id='30761f7c-6009-4d36-ac7c-962529afcbe8'), 'test_rebuild_instance_root_image1 failed!')
+    assert_equal({"return" => "True"}, @cli.rebuild_instance_root_image('8e16d307-70ed-4894-8e7f-dfbe18f30478', image_id='30761f7c-6009-4d36-ac7c-962529afcbe8'), 'test_rebuild_instance_root_image1 failed!')
   end
 
   # 省略datadisk和bandwidth参数无法成功修改
@@ -482,22 +482,11 @@ class ApiTest < Test::Unit::TestCase
                        "ipAddresses" => "192.168.4.108",
                        "memory" => "2048",
                        "instanceName" => "ubuntu12",
-                       "cpu" => "2"}}, @c.change_instance_type('9ffcf106-1c4f-4748-b54e-94aeedc03a0d', 'C2_M2', duration = '2M', datadisk=10, bandwidth=3), 'test_change_instance_type failed!')
-  end
-
-  def test_get_instance_metadata
-    assert_equal({"os_name" => "Linux",
-                  "os_version" => "6.5",
-                  "kvm" => "disabled",
-                  "k1" => "12",
-                  "app_tags" => "io_bound",
-                  "k2" => "34",
-                  "storage_type" => "rotational",
-                  "os_distribution" => "CentOS"}, @c.get_instance_metadata('860832f1-99b8-4715-a64f-49ce53387532'), 'test_get_instance_metadata failed!')
+                       "cpu" => "2"}}, @cli.change_instance_type('9ffcf106-1c4f-4748-b54e-94aeedc03a0d', 'C2_M2', duration = '2M', datadisk=10, bandwidth=3), 'test_change_instance_type failed!')
   end
 
   def test_describe_key_pairs
-    assert_equal(nil, @c.describe_key_pairs(), 'test_describe_key_pairs failed!')
+    assert_equal(nil, @cli.describe_key_pairs(), 'test_describe_key_pairs failed!')
   end
 
   def test_get_instance_metadata
@@ -508,29 +497,29 @@ class ApiTest < Test::Unit::TestCase
                   "app_tags" => "io_bound",
                   "k2" => "34",
                   "storage_type" => "rotational",
-                  "os_distribution" => "CentOS"}, @c.get_instance_metadata('860832f1-99b8-4715-a64f-49ce53387532'), 'test_get_instance_metadata failed!')
+                  "os_distribution" => "CentOS"}, @cli.get_instance_metadata('860832f1-99b8-4715-a64f-49ce53387532'), 'test_get_instance_metadata failed!')
   end
 
   def test_put_instance_metadata
-    assert_equal({"return" => "True"}, @c.put_instance_metadata('860832f1-99b8-4715-a64f-49ce53387532', {'k1' => 11, 'k2' => 14}), 'test_put_instance_metadata failed!')
+    assert_equal({"return" => "True"}, @cli.put_instance_metadata('860832f1-99b8-4715-a64f-49ce53387532', {'k1' => 11, 'k2' => 14}), 'test_put_instance_metadata failed!')
   end
 
 #-- todo
 #++
   def test_import_key_pair
-    assert_equal({"return" => "True"}, @c.import_key_pair('key_name', 'public_key'), 'test_import_key_pair failed!')
+    assert_equal({"return" => "True"}, @cli.import_key_pair('key_name', 'public_key'), 'test_import_key_pair failed!')
   end
 
   def test_delete_key_pair
-    assert_equal({"return" => "True"}, @c.delete_key_pair('key_id'), 'test_delete_key_pair failed!')
+    assert_equal({"return" => "True"}, @cli.delete_key_pair('key_id'), 'test_delete_key_pair failed!')
   end
 
   def test_create_template
-    assert_equal({"return" => "True"}, @c.create_template('860832f1-99b8-4715-a64f-49ce53387532', 'templateDemo'), 'test_create_template failed!')
+    assert_equal({"return" => "True"}, @cli.create_template('860832f1-99b8-4715-a64f-49ce53387532', 'templateDemo'), 'test_create_template failed!')
   end
 
   def test_delete_template
-    assert_equal({"return" => "True"}, @c.delete_template('1864494f-27f2-46ae-99dc-452962d4288c'), 'test_delete_template failed!')
+    assert_equal({"return" => "True"}, @cli.delete_template('1864494f-27f2-46ae-99dc-452962d4288c'), 'test_delete_template failed!')
   end
 
 end

@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 $:.unshift File.join(File.dirname(__FILE__), '..', 'common')
 require 'base.rb'
-require 'utils.rb'
 
 # 基类函数为Base，sdk的实现类
 class Client < Base
@@ -70,7 +69,7 @@ class Client < Base
   # - @param [Integer] limit 最大返回数量，用于分页控制
   # - @param [Integer] offset 返回的偏移量，用于分页控制
   # - @param [Hash] filters 返回结果过滤条件，由hash的key/value指定过滤字段名和值
-  # @return [Hash] 指定虚拟机的网络接口（虚拟网卡）信息
+  # - @return [Hash] 指定虚拟机的网络接口（虚拟网卡）信息
   def describe_network_interfaces(iid, limit=0, offset=0, filters=nil)
     kwargs = {}
     kwargs['InstanceId'] = iid
@@ -156,9 +155,6 @@ class Client < Base
 
         key = f.read()
         f.close()
-        #todo   decrypt_base64  待测
-        #val['passwordData'] = utils.decrypt_base64(key, val['passwordData'])
-        # val['passwordData']
         val['passwordData']=Base64.decode64(
             OpenSSL::HMAC.digest(OpenSSL::Digest.new('sha256'), key, val['passwordData'])
         ).strip
@@ -311,34 +307,3 @@ class Client < Base
     self.request('DeleteTemplate', *kwargs)
   end
 end
-
-
-=begin
-2014.12.8
-test code for class Client
-=end
-c = Client.new('c9b13af321f247a496f925d70ce001b3', '7013bacdb1d44e0a851aa8786f742596', 'https://192.168.2.33:8883')
-
-# 开发机
-#c1 = Client.new('8a29d475dc804ac6b1f335a2b96e5200', '41229efa5a074c9190d1f8b3d6948e33', 'https://192.168.4.249:8883')
-=begin
-export MOS_ACCESS=8a29d475dc804ac6b1f335a2b96e5200
-export MOS_SECRET=41229efa5a074c9190d1f8b3d6948e33
-export MOS_URL=https://192.168.4.249:8883
-export MOS_REGION=LocalTest
-=end
-puts (c.get_balance)
-# puts c.DescribeInstanceTypes(5,2)
-
-# puts c1.DescribeTemplates
-# puts c.DescribeInstanceVolumes('860832f1-99b8-4715-a64f-49ce53387532')
-# puts c.GetInstanceContractInfo('860832f1-99b8-4715-a64f-49ce53387532')
-# puts c.GetInstanceMetadata('860832f1-99b8-4715-a64f-49ce53387532')
-# puts c.PutInstanceMetadata('860832f1-99b8-4715-a64f-49ce53387532',{'k1'=>12,'k2'=>34})
-# puts c.DescribeKeyPairs
-# puts c.CreateTemplate('860832f1-99b8-4715-a64f-49ce53387532','demo')
-# puts c.DeleteTemplate 'ff2348d9-0a4d-4817-92b3-97b32ddfc40d'
-# puts c.TerminateInstance('66474718-388f-4cde-a983-fbd610c2041f')
-# c.CreateInstance('fa1026fe-c082-4ead-8458-802bf65ca64c', 'C1_M1', nil, nil, nil, datadisk=9, bandwidth=2)
-# puts c.ChangeInstanceType('9ffcf106-1c4f-4748-b54e-94aeedc03a0d','C1_M2')
-# puts c.GetPasswordData('860832f1-99b8-4715-a64f-49ce53387532')

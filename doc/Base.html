@@ -241,7 +241,7 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File mos/sdk/common/base.rb, line 29</span>
+            <pre><span class="ruby-comment"># File mos/sdk/common/base.rb, line 22</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">access</span>, <span class="ruby-identifier">secret</span>, <span class="ruby-identifier">url</span>, <span class="ruby-identifier">format</span>=<span class="ruby-string">&#39;xml&#39;</span>, <span class="ruby-identifier">timeout</span>=<span class="ruby-value">300</span>, <span class="ruby-identifier">debug</span>=<span class="ruby-keyword">false</span>)
   <span class="ruby-ivar">@access</span>=<span class="ruby-identifier">access</span>
   <span class="ruby-ivar">@secret</span>=<span class="ruby-identifier">secret</span>
@@ -294,7 +294,7 @@
 
           
           <div class="method-source-code" id="_request-source">
-            <pre><span class="ruby-comment"># File mos/sdk/common/base.rb, line 46</span>
+            <pre><span class="ruby-comment"># File mos/sdk/common/base.rb, line 39</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">_request</span>(<span class="ruby-identifier">action</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
   <span class="ruby-identifier">params</span> = {}
   <span class="ruby-identifier">params</span>[<span class="ruby-string">&#39;Action&#39;</span>] = <span class="ruby-identifier">action</span>
@@ -325,16 +325,10 @@
   <span class="ruby-identifier">data</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">encode_www_form</span>(<span class="ruby-identifier">params</span>)
   <span class="ruby-identifier">puts</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">url</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;?&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">data</span> <span class="ruby-keyword">if</span> <span class="ruby-keyword">self</span>.<span class="ruby-identifier">debug</span>
 
-  <span class="ruby-comment"># reference from http://blog.whatfettle.com/2006/09/13/ruby-nethttp-and-soapaction/</span>
   <span class="ruby-identifier">uri</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">url</span>)
   <span class="ruby-identifier">http</span> = <span class="ruby-constant">Net</span><span class="ruby-operator">::</span><span class="ruby-constant">HTTP</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">uri</span>.<span class="ruby-identifier">host</span>, <span class="ruby-identifier">uri</span>.<span class="ruby-identifier">port</span>)
-
-  <span class="ruby-comment"># convert hhtps to http  reference from http://stackoverflow.com/questions/5786779/using-nethttp-get-for-an-https-url</span>
   <span class="ruby-identifier">http</span>.<span class="ruby-identifier">use_ssl</span>=<span class="ruby-keyword">true</span>
   <span class="ruby-identifier">http</span>.<span class="ruby-identifier">verify_mode</span> = <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">SSL</span><span class="ruby-operator">::</span><span class="ruby-constant">VERIFY_NONE</span>
-
-  <span class="ruby-comment"># request_post method reference from</span>
-  <span class="ruby-comment"># http://ruby-doc.org/stdlib-2.1.5/libdoc/net/http/rdoc/Net/HTTP.html#method-i-request_post</span>
   <span class="ruby-identifier">http</span>.<span class="ruby-identifier">request_post</span>(<span class="ruby-string">&#39;/&#39;</span>, <span class="ruby-identifier">data</span>, <span class="ruby-identifier">headers</span>)
 <span class="ruby-keyword">end</span></pre>
           </div>
@@ -371,14 +365,10 @@
 
           
           <div class="method-source-code" id="get_signature-source">
-            <pre><span class="ruby-comment"># File mos/sdk/common/base.rb, line 92</span>
+            <pre><span class="ruby-comment"># File mos/sdk/common/base.rb, line 79</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_signature</span>(<span class="ruby-identifier">params</span>) <span class="ruby-comment">#signature method</span>
   <span class="ruby-identifier">req</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">url</span>)
   <span class="ruby-identifier">host</span> = <span class="ruby-identifier">req</span>.<span class="ruby-identifier">host</span>
-  <span class="ruby-comment"># 白忙活了半天 ruby其实完全有现成的东东可以调用</span>
-  <span class="ruby-comment"># if((req.scheme== &#39;http&#39; &amp;&amp; req.port == 80) || (req.scheme== &#39;https&#39; &amp;&amp; req.port == 443))</span>
-
-  <span class="ruby-comment"># end</span>
   <span class="ruby-identifier">endpoint</span> = <span class="ruby-identifier">host</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;:&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">req</span>.<span class="ruby-identifier">port</span>.<span class="ruby-identifier">to_s</span>
   <span class="ruby-identifier">path</span> = <span class="ruby-identifier">req</span>.<span class="ruby-identifier">path</span>
   <span class="ruby-identifier">path</span> = <span class="ruby-string">&#39;/&#39;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">req</span>.<span class="ruby-identifier">path</span> <span class="ruby-operator">==</span> <span class="ruby-string">&#39;&#39;</span>
@@ -388,7 +378,6 @@
                <span class="ruby-string">&#39;path&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">path</span>,
                <span class="ruby-string">&#39;params&#39;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">params</span>,
   }
-  <span class="ruby-comment"># https://github.com/aws/aws-sdk-core-ruby/blob/master/aws-sdk-core/lib/aws-sdk-core/signers/base.rb</span>
   <span class="ruby-identifier">params</span>=<span class="ruby-constant">Hash</span>[<span class="ruby-identifier">params</span>.<span class="ruby-identifier">sort</span>]
   <span class="ruby-identifier">sha256_hmac</span>(<span class="ruby-identifier">string_to_sign</span>(<span class="ruby-identifier">cred_dict</span>, <span class="ruby-identifier">params</span>))
 <span class="ruby-keyword">end</span></pre>
@@ -430,7 +419,7 @@
 
           
           <div class="method-source-code" id="parse_array_params-source">
-            <pre><span class="ruby-comment"># File mos/sdk/common/base.rb, line 164</span>
+            <pre><span class="ruby-comment"># File mos/sdk/common/base.rb, line 146</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">parse_array_params</span>(<span class="ruby-identifier">limit</span>, <span class="ruby-identifier">offset</span>, <span class="ruby-identifier">filters</span>, <span class="ruby-identifier">kwargs</span>)
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;Limit&#39;</span>] = <span class="ruby-identifier">limit</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">limit</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;Offset&#39;</span>] = <span class="ruby-identifier">offset</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">offset</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
@@ -477,7 +466,7 @@
 
           
           <div class="method-source-code" id="raw_request-source">
-            <pre><span class="ruby-comment"># File mos/sdk/common/base.rb, line 38</span>
+            <pre><span class="ruby-comment"># File mos/sdk/common/base.rb, line 31</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">raw_request</span>(<span class="ruby-identifier">action</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">_request</span>(<span class="ruby-identifier">action</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -517,7 +506,7 @@
 
           
           <div class="method-source-code" id="request-source">
-            <pre><span class="ruby-comment"># File mos/sdk/common/base.rb, line 139</span>
+            <pre><span class="ruby-comment"># File mos/sdk/common/base.rb, line 121</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">request</span>(<span class="ruby-identifier">action</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
   <span class="ruby-identifier">resp</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">_request</span>(<span class="ruby-identifier">action</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
   <span class="ruby-identifier">body</span> = <span class="ruby-identifier">resp</span>.<span class="ruby-identifier">body</span>
@@ -571,7 +560,7 @@
 
           
           <div class="method-source-code" id="sha256_hmac-source">
-            <pre><span class="ruby-comment"># File mos/sdk/common/base.rb, line 129</span>
+            <pre><span class="ruby-comment"># File mos/sdk/common/base.rb, line 111</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">sha256_hmac</span>(<span class="ruby-identifier">value</span>)
   <span class="ruby-constant">Base64</span>.<span class="ruby-identifier">encode64</span>(
       <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">HMAC</span>.<span class="ruby-identifier">digest</span>(<span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">Digest</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;sha256&#39;</span>), <span class="ruby-keyword">self</span>.<span class="ruby-identifier">secret</span>, <span class="ruby-identifier">value</span>)
@@ -613,7 +602,7 @@
 
           
           <div class="method-source-code" id="string_to_sign-source">
-            <pre><span class="ruby-comment"># File mos/sdk/common/base.rb, line 117</span>
+            <pre><span class="ruby-comment"># File mos/sdk/common/base.rb, line 99</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">string_to_sign</span>(<span class="ruby-identifier">cred_dict</span>, <span class="ruby-identifier">params</span>)
   [
       <span class="ruby-identifier">cred_dict</span>[<span class="ruby-string">&#39;verb&#39;</span>],

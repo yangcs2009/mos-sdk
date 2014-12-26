@@ -5,14 +5,7 @@ require "net/http"
 require "json"
 require "logger"
 require "rubygems"
-
-# xml/json to hash
-# http://stackoverflow.com/questions/15702189/ruby-crack-gem-in-main-undefined-method-for-nilnilclass-nometho
-# https://github.com/jnunemaker/crack
-# http://stackoverflow.com/questions/21947060/installed-gem-but-getting-cannot-load-such-file 安装文档
 require "crack"
-
-# url encoding
 require "erb"
 include ERB::Util
 
@@ -73,16 +66,10 @@ class Base
     data = URI.encode_www_form(params)
     puts self.url + '?' + data if self.debug
 
-    # reference from http://blog.whatfettle.com/2006/09/13/ruby-nethttp-and-soapaction/
     uri = URI.parse(self.url)
     http = Net::HTTP.new(uri.host, uri.port)
-
-    # convert hhtps to http  reference from http://stackoverflow.com/questions/5786779/using-nethttp-get-for-an-https-url
     http.use_ssl=true
     http.verify_mode = OpenSSL::SSL::VERIFY_NONE
-
-    # request_post method reference from
-    # http://ruby-doc.org/stdlib-2.1.5/libdoc/net/http/rdoc/Net/HTTP.html#method-i-request_post
     http.request_post('/', data, headers)
   end
 
@@ -92,10 +79,6 @@ class Base
   def get_signature(params) #signature method
     req = URI.parse(self.url)
     host = req.host
-    # 白忙活了半天 ruby其实完全有现成的东东可以调用
-    # if((req.scheme== 'http' && req.port == 80) || (req.scheme== 'https' && req.port == 443))
-
-    # end
     endpoint = host + ':' + req.port.to_s
     path = req.path
     path = '/' if req.path == ''
@@ -105,7 +88,6 @@ class Base
                  'path' => path,
                  'params' => params,
     }
-    # https://github.com/aws/aws-sdk-core-ruby/blob/master/aws-sdk-core/lib/aws-sdk-core/signers/base.rb
     params=Hash[params.sort]
     sha256_hmac(string_to_sign(cred_dict, params))
   end
