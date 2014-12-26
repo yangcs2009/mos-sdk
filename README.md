@@ -1,5 +1,5 @@
 # MOSAPI_RUBY
-**编码规范参照 https://github.com/bbatsov/rubocop**
+**编码规范参照 <https://github.com/bbatsov/rubocop>**
 ## 1. 工程结构说明
 mos/sdk/common  -->sdk的基类文档   
 mos/sdk/v1  -->sdk client  
