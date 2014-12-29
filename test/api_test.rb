@@ -9,10 +9,7 @@ class ApiTest < Test::Unit::TestCase
   # to set up fixture information.
   def setup
     # mos
-    @cli = Client.new('c9b13af321f247a496f925d70ce001b3', '7013bacdb1d44e0a851aa8786f742596', 'https://192.168.2.33:8883')
-
-    # 开发机
-    @cli1 = Client.new('8a29d475dc804ac6b1f335a2b96e5200', '41229efa5a074c9190d1f8b3d6948e33', 'https://192.168.4.249:8883')
+    @cli = Client.new('MOS_ACCESS_KEY', 'MOS_ACCESS_SECRET', 'MOS_ACCESS_URL')
   end
 
   # Called after every test method runs. Can be used to tear

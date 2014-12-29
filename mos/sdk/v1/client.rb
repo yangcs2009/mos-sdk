@@ -105,7 +105,7 @@ class Client < Base
   # - @param [String] duration 虚拟机租期, 缺省为'1M'，即一个月
   # - @param [String] name 虚拟机名称(可选)
   # - @param [String] keypair 虚拟机使用的SSH密钥ID
-  # - @param [Integer] datadisk 指定创建虚拟机使用的额外数据盘，单位为10GB
+  # - @param [Integer] datadisk 指定创建虚拟机使用的额外数据盘，单位为1GB
   # - @param [Integer] bandwidth 指定创建虚拟机使用的额外带宽，单位为Mbps
   # - @return [Hash]   创建成功的虚拟机信息
   def create_instance(imageid, itype, duration=nil, name=nil, keypair=nil, datadisk=nil, bandwidth=nil)
@@ -211,7 +211,7 @@ class Client < Base
   # - @param [String] iid 虚拟机ID
   # - @param [String] itype  指定更改的虚拟机类型
   # - @param [String] duration 指定更改后的初始租期，缺省为'1M'，即一个月
-  # - @param [Integer] datadisk 指定创建虚拟机使用的额外数据盘，单位为10GB
+  # - @param [Integer] datadisk 指定创建虚拟机使用的额外数据盘，单位为1GB
   # - @param [Integer] bandwidth 指定创建虚拟机使用的额外带宽，单位为Mbps
   def change_instance_type(iid, itype, duration=nil, datadisk=nil, bandwidth=nil)
     kwargs = {}

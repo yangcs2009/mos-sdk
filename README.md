@@ -15,7 +15,7 @@ key = 'MOS_ACCESS_KEY'
 secret = 'MOS_ACCESS_SECRET'  
 url = 'https://mosapi.meituan.com/mcsapi/v1'  
 cli = Client(key, secret, url)  
-balance = cli.GetBalance()  
+balance = cli.get_balance()
 puts balance
 ```
 
