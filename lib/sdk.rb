@@ -1,9 +1,14 @@
 # -*- coding: utf-8 -*-
-$:.unshift File.join(File.dirname(__FILE__), '..', 'common')
+$:.unshift File.join(File.dirname(__FILE__), '.', 'sdk')
 require 'base.rb'
 
+module Sdk
+  class Sdk < Sdk::Base
+  end
+end
+
 # 基类函数为Base，sdk的实现类
-class Client < Base
+class Sdk::Sdk
   # 构造函数，实现继承基类函数
   def initialize(access, secret, url, format='xml', timeout=300, debug=false)
     super(access, secret, url, format, timeout, debug)
@@ -118,7 +123,7 @@ class Client < Base
 
     kwargs['InstanceName'] = name unless name.nil?
     kwargs['KeyName'] = keypair unless keypair.nil?
-    kwargs['ExtraExtDisksize'] = datadisk*10 unless datadisk.nil?
+    kwargs['ExtraExtDisksize'] = datadisk unless datadisk.nil?
     kwargs['ExtraExtBandwidth'] = bandwidth unless bandwidth.nil?
     val = self.request('CreateInstance', *kwargs)
     val['Instance']
@@ -221,7 +226,7 @@ class Client < Base
       /^\d+[HhMm]$/.match(duration) ? kwargs['Duration'] = duration : (raise Exception('Illegal duration format'))
     end
 
-    kwargs['ExtraExtDisksize'] = datadisk*10 unless datadisk.nil?
+    kwargs['ExtraExtDisksize'] = datadisk unless datadisk.nil?
     kwargs['ExtraExtBandwidth'] = bandwidth unless bandwidth.nil?
 
     self.request('ChangeInstanceType', *kwargs)
@@ -307,3 +312,7 @@ class Client < Base
     self.request('DeleteTemplate', *kwargs)
   end
 end
+
+
+cli = Sdk::Sdk.new('c9b13af321f247a496f925d70ce001b3','7013bacdb1d44e0a851aa8786f742596','https://192.168.2.33:8883')
+puts  cli.get_balance

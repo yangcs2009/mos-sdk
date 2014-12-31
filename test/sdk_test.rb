@@ -1,15 +1,18 @@
-$:.unshift File.join(File.dirname(__FILE__), '..', 'mos', 'sdk', 'v1')
+$:.unshift File.join(File.dirname(__FILE__), '..', 'lib')
 require "test/unit"
-require "client"
+require "minitest/autorun"
+require "sdk"
 
 # 此文档为client对应测试文档，遵循Ruby单元测试框架协议编写
-class ApiTest < Test::Unit::TestCase
+class SdkTest < Minitest::Unit::TestCase
+#class SdkTest <Test::Unit::TestCase
 
   # Called before every test method runs. Can be used
   # to set up fixture information.
   def setup
-    # mos
-    @cli = Client.new('MOS_ACCESS_KEY', 'MOS_ACCESS_SECRET', 'MOS_ACCESS_URL')
+    # lib
+    #@cli = Client.new('MOS_ACCESS_KEY', 'MOS_ACCESS_SECRET', 'MOS_ACCESS_URL')
+    @cli=Sdk::Sdk.new('c9b13af321f247a496f925d70ce001b3','7013bacdb1d44e0a851aa8786f742596','https://192.168.2.33:8883')
   end
 
   # Called after every test method runs. Can be used to tear
@@ -261,6 +264,7 @@ class ApiTest < Test::Unit::TestCase
                         "instanceType" => "S"}]}, @cli.describe_instance_types, 'test_describe_instance_types failed!')
   end
 
+=begin
   def test_describe_templates
     assert_equal({"Template" =>
                       [{"status" => "active",
@@ -518,5 +522,6 @@ class ApiTest < Test::Unit::TestCase
   def test_delete_template
     assert_equal({"return" => "True"}, @cli.delete_template('1864494f-27f2-46ae-99dc-452962d4288c'), 'test_delete_template failed!')
   end
+=end
 
 end

@@ -8,8 +8,12 @@ require "rubygems"
 require "crack"
 require "erb"
 include ERB::Util
+module Sdk
+  class Base
+  end
+end
 
-class Base
+class Sdk::Base
   attr_accessor :access, :secret, :url, :format, :timeout, :debug
 
   # 基类初始化函数
@@ -73,7 +77,7 @@ class Base
     http.request_post('/', data, headers)
   end
 
-  # 亚马逊签名函数
+  # 签名函数
   # - @param [Hash] params  签名参数
   # - @return [String]  签名处理结果
   def get_signature(params) #signature method
