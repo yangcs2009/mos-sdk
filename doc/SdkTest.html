@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class SdkTest - RDoc Documentation</title>
+
+<link href="./fonts.css" rel="stylesheet">
+<link href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/navigation.js"></script>
+<script src="./js/search_index.js"></script>
+<script src="./js/search.js"></script>
+<script src="./js/searcher.js"></script>
+<script src="./js/darkfish.js"></script>
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">Minitest::Unit::TestCase
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-setup">#setup</a>
+    
+    <li ><a href="#method-i-teardown">#teardown</a>
+    
+    <li ><a href="#method-i-test_describe_instance_types">#test_describe_instance_types</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-SdkTest">
+  <h1 id="class-SdkTest" class="class">
+    class SdkTest
+  </h1>
+
+  <section class="description">
+    
+<p>此文档为sdk对应测试文档，遵循Ruby单元测试框架协议编写</p>
+
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-setup" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">setup</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Called before every test method runs. Can be used to set up fixture
+information.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="setup-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">setup</span>
+  <span class="ruby-comment"># lib</span>
+  <span class="ruby-comment">#@cli = Client.new(&#39;MOS_ACCESS_KEY&#39;, &#39;MOS_ACCESS_SECRET&#39;, &#39;MOS_ACCESS_URL&#39;)</span>
+  <span class="ruby-ivar">@cli</span>=<span class="ruby-constant">Sdk</span><span class="ruby-operator">::</span><span class="ruby-constant">Sdk</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;c9b13af321f247a496f925d70ce001b3&#39;</span>,<span class="ruby-string">&#39;7013bacdb1d44e0a851aa8786f742596&#39;</span>,<span class="ruby-string">&#39;https://192.168.2.33:8883&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-teardown" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">teardown</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Called after every test method runs. Can be used to tear down fixture
+information.</p>
+          
+          
+
+          
+          <div class="method-source-code" id="teardown-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 21</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">teardown</span>
+  <span class="ruby-comment"># Do nothing</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-test_describe_instance_types" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">test_describe_instance_types</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="test_describe_instance_types-source">
+            <pre><span class="ruby-comment"># File test/sdk_test.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">test_describe_instance_types</span>
+  <span class="ruby-identifier">assert_equal</span>({<span class="ruby-string">&quot;InstanceType&quot;</span> =<span class="ruby-operator">&gt;</span>
+                    [{<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;5a96d81a-ee1a-48be-b65b-85fe5cf6d1bb&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;16&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;32768&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C16_M32&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;ad14ddb6-b2e3-4fd8-8a1b-048371056bba&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;16&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;16384&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C16_M16&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;6aea030b-b087-485e-9493-ca3700c286f7&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;16&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;49152&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C16_M48&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;06bd421a-1d01-40ad-a1d5-1da915a27a00&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;16&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;24576&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C16_M24&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;50e6b904-31f2-4762-9c9a-dd0a162ed3ff&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;12&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;49152&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C12_M48&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;23ef60cf-20e5-4076-96f4-c24f5fd4d959&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;12&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;32768&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C12_M32&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;85acefad-d0a2-42de-b749-a6a669533f9c&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;12&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;24576&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C12_M24&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;516efa96-3e6d-43f1-b504-30957733f3d5&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;12&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;16384&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C12_M16&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;72b1efe2-dee5-4e8e-bc83-40a47521462d&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;12&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;12288&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C12_M12&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;38f2dda6-ccf2-4d38-941f-7e65df5a9ebb&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;16&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;65536&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C16_M64&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;8f95bb97-df9c-47a3-aa27-359cfea049d6&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;1&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;2&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;491520&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;4096&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;M_mem_4_disk_480_net_1&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;b980c07e-af85-4ce7-9f3c-cb650f8997ac&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;100&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;1&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;102400&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;512&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;T_disk&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;193ad6d9-ed5e-464f-aec6-43e86bdabb9b&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;8&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;16384&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C8_M16&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;4e01bc1d-e3a3-4cb9-af1e-64af7dd8b71d&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;8&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;24576&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C8_M24&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;5202458a-9c3b-42b5-b630-f58784f255d5&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;4&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;6144&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C4_M6&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;77efb93d-c54a-4146-861f-5aa279de3913&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;8&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;32768&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C8_M32&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;7941f40c-7bb4-4c91-a182-2166af8deb51&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;4&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;12288&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C4_M12&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;92764747-2746-474b-afbe-e026d6d629c5&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;8&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;12288&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C8_M12&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;93391751-870e-4937-977e-3d8b760a1018&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;4&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;4096&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C4_M4&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;9813e61a-53b9-4afe-9c5e-a443106961ab&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;2&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;6144&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C2_M6&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;b06981a6-2699-44d1-83b1-bb41e6b97177&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;2&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;8192&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C2_M8&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;c4818cd6-3416-49e9-9f47-07fffdbffa23&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;4&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;16384&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C4_M16&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;c4a9e960-982a-4be0-993d-f7a68b4a9f82&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;8&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;8192&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C8_M8&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;cf946075-025c-4870-82b6-695245fdb3f7&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;4&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;8192&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C4_M8&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;026745cb-b4e0-403c-9fa0-ff97f9293a0a&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;1&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;1024&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C1_M1&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;4468768e-1e78-453b-b671-f79733463369&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;2&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;4096&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C2_M4&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;4cf6b17e-864b-4d35-81e9-5b1c9d28a12e&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;1&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;4096&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C1_M4&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;b93f75e4-9051-45c5-b43d-85737d97a3b6&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;2&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;2048&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C2_M2&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;e1c8e3e6-c891-42d4-ac89-34b9657dbb80&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;1&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;2048&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;C1_M2&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;2a62da91-8220-434f-b613-bac7f2385247&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;100&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;1&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;512&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;T&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;3588d89b-dc58-40d1-8240-c0ffb1094eb8&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;100&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;6&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;102400&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;8196&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;XL&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;8278f22a-c25e-4d51-8b94-2a76efa40c59&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;100&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;4&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;51200&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;4096&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;L&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;6c34343c-0568-4734-8456-956028613b81&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;100&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;2&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;30720&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;2048&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;M&quot;</span>},
+                     {<span class="ruby-string">&quot;instanceTypeId&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;03631ab6-eccd-4e59-8906-e18385f69f2e&quot;</span>,
+                      <span class="ruby-string">&quot;internalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;externalBandwidth&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;100&quot;</span>,
+                      <span class="ruby-string">&quot;cpu&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;1&quot;</span>,
+                      <span class="ruby-string">&quot;volume&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;0&quot;</span>,
+                      <span class="ruby-string">&quot;memory&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;1024&quot;</span>,
+                      <span class="ruby-string">&quot;instanceType&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;S&quot;</span>}]}, <span class="ruby-ivar">@cli</span>.<span class="ruby-identifier">describe_instance_types</span>, <span class="ruby-string">&#39;test_describe_instance_types failed!&#39;</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://rdoc.rubyforge.org">RDoc</a> 4.1.2.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

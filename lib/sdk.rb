@@ -9,7 +9,7 @@ end
 
 # 基类函数为Base，sdk的实现类
 class Sdk::Sdk
-  # 构造函数，实现继承基类函数
+  # 构造函数
   def initialize(access, secret, url, format='xml', timeout=300, debug=false)
     super(access, secret, url, format, timeout, debug)
   end
@@ -84,7 +84,7 @@ class Sdk::Sdk
   end
 
   # 虚拟机租期续费
-  # - @param [String] iid
+  # - @param [String] iid  虚拟机ID
   # - @param [String] duration 续费租期，缺省为'1M'，即一个月
   def renew_instance(iid, duration=nil)
     kwargs = {}
@@ -96,7 +96,7 @@ class Sdk::Sdk
   end
 
   # 获取虚拟机的租期信息
-  # - @param [String] iid
+  # - @param [String] iid  虚拟机ID
   # - @return [Hash]  虚拟机租期信息，包含过期时间、自动删除时间
   def get_instance_contract_info(iid)
     kwargs = {}

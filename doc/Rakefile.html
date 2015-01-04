@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>README - RDoc Documentation</title>
+<title>Rakefile - RDoc Documentation</title>
 
 <link href="./fonts.css" rel="stylesheet">
 <link href="./rdoc.css" rel="stylesheet">
@@ -54,16 +54,6 @@
   </div>
 
   
-<div class="nav-section">
-  <h3>Table of Contents</h3>
-
-  <ul class="link-list" role="directory">
-    <li><a href="#label-MOSAPI_RUBY">MOSAPI_RUBY</a>
-    <li><a href="#label-1.+%E5%B7%A5%E7%A8%8B%E7%BB%93%E6%9E%84%E8%AF%B4%E6%98%8E">1. 工程结构说明</a>
-    <li><a href="#label-2.+%E4%BD%BF%E7%94%A8SDK">2. 使用SDK</a>
-  </ul>
-</div>
-
 
   <div id="project-metadata">
     <div id="fileindex-section" class="nav-section">
@@ -89,31 +79,17 @@
   </div>
 </nav>
 
-<main role="main" aria-label="Page README.md">
+<main role="main" aria-label="Page Rakefile">
 
-<h1 id="label-MOSAPI_RUBY">MOSAPI_RUBY<span><a href="#label-MOSAPI_RUBY">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+<p>require “bundler/gem_tasks” require &#39;rake/testtask&#39;</p>
 
-<p><strong>编码规范参照 <a
-href="https://github.com/bbatsov/rubocop">github.com/bbatsov/rubocop</a></strong></p>
+<p>Rake::TestTask.new do |t|</p>
 
-<h2 id="label-1.+%E5%B7%A5%E7%A8%8B%E7%BB%93%E6%9E%84%E8%AF%B4%E6%98%8E">1. 工程结构说明<span><a href="#label-1.+%E5%B7%A5%E7%A8%8B%E7%BB%93%E6%9E%84%E8%AF%B4%E6%98%8E">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+<pre>t.libs &lt;&lt; &#39;test&#39;</pre>
 
-<p>mos/sdk/common –&gt;sdk的基类文档<br> mos/sdk/v1 –&gt;sdk client<br> doc
-–&gt;对应说明文档<br> test –&gt;对应测试文档</p>
+<p>end</p>
 
-<h2 id="label-2.+%E4%BD%BF%E7%94%A8SDK">2. 使用SDK<span><a href="#label-2.+%E4%BD%BF%E7%94%A8SDK">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
-
-<p>通过Client生成客户端实例，API接口说明参见“mos/sdk/v1/client.rb文档或doc/Client.html”。<br>
-示例代码如下:</p>
-
-<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">&quot;mos/sdk/v1/client&quot;</span>  
-<span class="ruby-identifier">key</span> = <span class="ruby-string">&#39;MOS_ACCESS_KEY&#39;</span>  
-<span class="ruby-identifier">secret</span> = <span class="ruby-string">&#39;MOS_ACCESS_SECRET&#39;</span>  
-<span class="ruby-identifier">url</span> = <span class="ruby-string">&#39;https://mosapi.meituan.com/mcsapi/v1&#39;</span>  
-<span class="ruby-identifier">cli</span> = <span class="ruby-constant">Client</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">secret</span>, <span class="ruby-identifier">url</span>)  
-<span class="ruby-identifier">balance</span> = <span class="ruby-identifier">cli</span>.<span class="ruby-identifier">get_balance</span>()
-<span class="ruby-identifier">puts</span> <span class="ruby-identifier">balance</span>
-</pre>
+<p>desc “Run tests” task :default =&gt; :test</p>
 </main>
 
 

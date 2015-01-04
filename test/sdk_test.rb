@@ -3,7 +3,7 @@ require "test/unit"
 require "minitest/autorun"
 require "sdk"
 
-# 此文档为client对应测试文档，遵循Ruby单元测试框架协议编写
+# 此文档为sdk对应测试文档，遵循Ruby单元测试框架协议编写
 class SdkTest < Minitest::Unit::TestCase
 #class SdkTest <Test::Unit::TestCase
 
