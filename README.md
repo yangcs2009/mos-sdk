@@ -37,7 +37,7 @@ require "sdk"
 key = 'MOS_ACCESS_KEY'  
 secret = 'MOS_ACCESS_SECRET'  
 url = 'MOS_ACCESS_URL'  
-cli = Sdk::Sdk(key, secret, url)  
+cli = Sdk::Sdk.new(key, secret, url)
 balance = cli.get_balance()
 puts balance
 ```

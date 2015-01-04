@@ -4,15 +4,14 @@ require "minitest/autorun"
 require "sdk"
 
 # 此文档为sdk对应测试文档，遵循Ruby单元测试框架协议编写
-class SdkTest < Minitest::Unit::TestCase
-#class SdkTest <Test::Unit::TestCase
+class SdkTest <Test::Unit::TestCase
 
   # Called before every test method runs. Can be used
   # to set up fixture information.
   def setup
     # lib
     #@cli = Client.new('MOS_ACCESS_KEY', 'MOS_ACCESS_SECRET', 'MOS_ACCESS_URL')
-    @cli=Sdk::Sdk.new('c9b13af321f247a496f925d70ce001b3','7013bacdb1d44e0a851aa8786f742596','https://192.168.2.33:8883')
+    @cli=Sdk::Sdk.new('c9b13af321f247a496f925d70ce001b3', '7013bacdb1d44e0a851aa8786f742596', 'https://192.168.2.33:8883')
   end
 
   # Called after every test method runs. Can be used to tear
