@@ -1,12 +1,4 @@
-Wed, 07 Jan 2015 10:34:41 +0800
-./Gemfile	Wed, 31 Dec 2014 13:34:37 +0800
-./Gemfile.lock	Thu, 25 Dec 2014 16:34:13 +0800
-./lib/sdk/base.rb	Wed, 07 Jan 2015 10:21:23 +0800
-./lib/sdk/version.rb	Tue, 30 Dec 2014 13:55:26 +0800
-./lib/sdk.rb	Wed, 07 Jan 2015 10:31:35 +0800
-./LICENSE.txt	Tue, 30 Dec 2014 13:56:35 +0800
-./Rakefile	Wed, 31 Dec 2014 11:44:50 +0800
-./README.md	Sun, 04 Jan 2015 19:31:53 +0800
-./sdk-1.0.0.gem	Tue, 30 Dec 2014 15:32:02 +0800
-./sdk.gemspec	Wed, 31 Dec 2014 10:59:02 +0800
-./test/sdk_test.rb	Wed, 07 Jan 2015 10:31:35 +0800
+Wed, 07 Jan 2015 16:50:05 +0800
+./lib/mos_sdk/base.rb	Wed, 07 Jan 2015 16:13:22 +0800
+./lib/mos_sdk/version.rb	Wed, 07 Jan 2015 16:35:45 +0800
+./lib/mos_sdk.rb	Wed, 07 Jan 2015 16:21:59 +0800

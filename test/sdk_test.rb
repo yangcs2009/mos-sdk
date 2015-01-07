@@ -1,16 +1,15 @@
 $:.unshift File.join(File.dirname(__FILE__), '..', 'lib')
 require "test/unit"
-require "minitest/autorun"
-require "sdk"
+require "mos_sdk"
 
-# 此文档为sdk对应测试文档，遵循Ruby单元测试框架协议编写
+# 此文档为mos_sdk对应测试文档，遵循Ruby单元测试框架协议编写
 class SdkTest <Test::Unit::TestCase
 
   # - Called before every test method runs. Can be used
   # - to set up fixture information.
   def setup
     # handler
-    @cli = Client.new('MOS_ACCESS_KEY', 'MOS_ACCESS_SECRET', 'MOS_ACCESS_URL')
+    @cli = MosSdk::Client.new('MOS_ACCESS_KEY', 'MOS_ACCESS_SECRET', 'MOS_ACCESS_URL')
   end
 
   # Called after every test method runs. Can be used to tear

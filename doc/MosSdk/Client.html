@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>class Sdk::Sdk - RDoc Documentation</title>
+<title>class MosSdk::Client - RDoc Documentation</title>
 
 <link href="../fonts.css" rel="stylesheet">
 <link href="../rdoc.css" rel="stylesheet">
@@ -61,7 +61,7 @@
   <h3>Parent</h3>
 
   
-  <p class="link"><a href="Base.html">Sdk::Base</a>
+  <p class="link"><a href="Base.html">MosSdk::Base</a>
   
 </div>
 
@@ -129,14 +129,14 @@
   </div>
 </nav>
 
-<main role="main" aria-labelledby="class-Sdk::Sdk">
-  <h1 id="class-Sdk::Sdk" class="class">
-    class Sdk::Sdk
+<main role="main" aria-labelledby="class-MosSdk::Client">
+  <h1 id="class-MosSdk::Client" class="class">
+    class MosSdk::Client
   </h1>
 
   <section class="description">
     
-<p>基类函数为Base，sdk的实现类</p>
+<p>基类函数为Base，mos_sdk的实现类</p>
 
   </section>
 
@@ -177,13 +177,13 @@
           
             <div class="method-calls-super">
               Calls superclass method
-              <a href="Base.html#method-c-new">Sdk::Base.new</a>
+              <a href="Base.html#method-c-new">MosSdk::Base.new</a>
             </div>
           
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 12</span>
+            <pre><span class="ruby-comment"># File lib/mos_sdk.rb, line 12</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">access</span>, <span class="ruby-identifier">secret</span>, <span class="ruby-identifier">url</span>, <span class="ruby-identifier">format</span>=<span class="ruby-string">&#39;xml&#39;</span>, <span class="ruby-identifier">timeout</span>=<span class="ruby-value">300</span>, <span class="ruby-identifier">debug</span>=<span class="ruby-keyword">false</span>)
   <span class="ruby-keyword">super</span>(<span class="ruby-identifier">access</span>, <span class="ruby-identifier">secret</span>, <span class="ruby-identifier">url</span>, <span class="ruby-identifier">format</span>, <span class="ruby-identifier">timeout</span>, <span class="ruby-identifier">debug</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -237,7 +237,7 @@
 
           
           <div class="method-source-code" id="change_instance_type-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 221</span>
+            <pre><span class="ruby-comment"># File lib/mos_sdk.rb, line 221</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">change_instance_type</span>(<span class="ruby-identifier">iid</span>, <span class="ruby-identifier">itype</span>, <span class="ruby-identifier">duration</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">datadisk</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">bandwidth</span>=<span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
@@ -297,7 +297,7 @@
 
           
           <div class="method-source-code" id="create_instance-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 115</span>
+            <pre><span class="ruby-comment"># File lib/mos_sdk.rb, line 115</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create_instance</span>(<span class="ruby-identifier">imageid</span>, <span class="ruby-identifier">itype</span>, <span class="ruby-identifier">duration</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">name</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">keypair</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">datadisk</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">bandwidth</span>=<span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;ImageId&#39;</span>] = <span class="ruby-identifier">imageid</span>
@@ -351,7 +351,7 @@
 
           
           <div class="method-source-code" id="create_template-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 299</span>
+            <pre><span class="ruby-comment"># File lib/mos_sdk.rb, line 299</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create_template</span>(<span class="ruby-identifier">iid</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">notes</span>=<span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
@@ -391,7 +391,7 @@
 
           
           <div class="method-source-code" id="delete_key_pair-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 288</span>
+            <pre><span class="ruby-comment"># File lib/mos_sdk.rb, line 288</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_key_pair</span>(<span class="ruby-identifier">kid</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;KeyName&#39;</span>] = <span class="ruby-identifier">kid</span>
@@ -429,7 +429,7 @@
 
           
           <div class="method-source-code" id="delete_template-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 309</span>
+            <pre><span class="ruby-comment"># File lib/mos_sdk.rb, line 309</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_template</span>(<span class="ruby-identifier">tid</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;TemplateId&#39;</span>] = <span class="ruby-identifier">tid</span>
@@ -469,7 +469,7 @@
 
           
           <div class="method-source-code" id="describe_instance_status-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 134</span>
+            <pre><span class="ruby-comment"># File lib/mos_sdk.rb, line 134</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">describe_instance_status</span>(<span class="ruby-identifier">iid</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
@@ -514,7 +514,7 @@
 
           
           <div class="method-source-code" id="describe_instance_types-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 21</span>
+            <pre><span class="ruby-comment"># File lib/mos_sdk.rb, line 21</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">describe_instance_types</span>(<span class="ruby-identifier">limit</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">offset</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">filters</span>=<span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">parse_array_params</span>(<span class="ruby-identifier">limit</span>, <span class="ruby-identifier">offset</span>, <span class="ruby-identifier">filters</span>, <span class="ruby-identifier">kwargs</span>) <span class="ruby-comment"># parse_list_params  父类函数</span>
@@ -561,7 +561,7 @@
 
           
           <div class="method-source-code" id="describe_instance_volumes-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 63</span>
+            <pre><span class="ruby-comment"># File lib/mos_sdk.rb, line 63</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">describe_instance_volumes</span>(<span class="ruby-identifier">iid</span>, <span class="ruby-identifier">limit</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">offset</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">filters</span>=<span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
@@ -611,7 +611,7 @@
 
           
           <div class="method-source-code" id="describe_instances-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 48</span>
+            <pre><span class="ruby-comment"># File lib/mos_sdk.rb, line 48</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">describe_instances</span>(<span class="ruby-identifier">ids</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">names</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">limit</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">offset</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">filters</span>=<span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">ids</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">ids</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Array</span>) <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">ids</span>.<span class="ruby-identifier">size</span>() <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
@@ -658,7 +658,7 @@
 
           
           <div class="method-source-code" id="describe_key_pairs-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 267</span>
+            <pre><span class="ruby-comment"># File lib/mos_sdk.rb, line 267</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">describe_key_pairs</span>(<span class="ruby-identifier">limit</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">offset</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">filters</span>=<span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">parse_array_params</span>(<span class="ruby-identifier">limit</span>, <span class="ruby-identifier">offset</span>, <span class="ruby-identifier">filters</span>, <span class="ruby-identifier">kwargs</span>)
@@ -705,7 +705,7 @@
 
           
           <div class="method-source-code" id="describe_network_interfaces-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 77</span>
+            <pre><span class="ruby-comment"># File lib/mos_sdk.rb, line 77</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">describe_network_interfaces</span>(<span class="ruby-identifier">iid</span>, <span class="ruby-identifier">limit</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">offset</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">filters</span>=<span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
@@ -745,7 +745,7 @@
 
           
           <div class="method-source-code" id="describe_templates-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 30</span>
+            <pre><span class="ruby-comment"># File lib/mos_sdk.rb, line 30</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">describe_templates</span>()
   <span class="ruby-identifier">val</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;DescribeTemplates&#39;</span>)
   <span class="ruby-identifier">val</span>[<span class="ruby-string">&#39;TemplateSet&#39;</span>]
@@ -782,7 +782,7 @@
 
           
           <div class="method-source-code" id="get_balance-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 37</span>
+            <pre><span class="ruby-comment"># File lib/mos_sdk.rb, line 37</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_balance</span>()
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">request</span>(<span class="ruby-string">&#39;GetBalance&#39;</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -820,7 +820,7 @@
 
           
           <div class="method-source-code" id="get_instance_contract_info-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 100</span>
+            <pre><span class="ruby-comment"># File lib/mos_sdk.rb, line 100</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_instance_contract_info</span>(<span class="ruby-identifier">iid</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
@@ -860,7 +860,7 @@
 
           
           <div class="method-source-code" id="get_instance_metadata-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 238</span>
+            <pre><span class="ruby-comment"># File lib/mos_sdk.rb, line 238</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_instance_metadata</span>(<span class="ruby-identifier">iid</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
@@ -903,7 +903,7 @@
 
           
           <div class="method-source-code" id="get_password_data-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 145</span>
+            <pre><span class="ruby-comment"># File lib/mos_sdk.rb, line 145</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_password_data</span>(<span class="ruby-identifier">iid</span>, <span class="ruby-identifier">key_file</span>=<span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
@@ -964,7 +964,7 @@
 
           
           <div class="method-source-code" id="import_key_pair-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 278</span>
+            <pre><span class="ruby-comment"># File lib/mos_sdk.rb, line 278</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">import_key_pair</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">pubkey</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;KeyName&#39;</span>] = <span class="ruby-identifier">name</span>
@@ -1006,7 +1006,7 @@
 
           
           <div class="method-source-code" id="put_instance_metadata-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 248</span>
+            <pre><span class="ruby-comment"># File lib/mos_sdk.rb, line 248</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">put_instance_metadata</span>(<span class="ruby-identifier">iid</span>, <span class="ruby-identifier">data</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
@@ -1052,7 +1052,7 @@
 
           
           <div class="method-source-code" id="reboot_instance-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 190</span>
+            <pre><span class="ruby-comment"># File lib/mos_sdk.rb, line 190</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">reboot_instance</span>(<span class="ruby-identifier">iid</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
@@ -1092,7 +1092,7 @@
 
           
           <div class="method-source-code" id="rebuild_instance_root_image-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 207</span>
+            <pre><span class="ruby-comment"># File lib/mos_sdk.rb, line 207</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">rebuild_instance_root_image</span>(<span class="ruby-identifier">iid</span>, <span class="ruby-identifier">image_id</span>=<span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
@@ -1133,7 +1133,7 @@
 
           
           <div class="method-source-code" id="renew_instance-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 88</span>
+            <pre><span class="ruby-comment"># File lib/mos_sdk.rb, line 88</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">renew_instance</span>(<span class="ruby-identifier">iid</span>, <span class="ruby-identifier">duration</span>=<span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
@@ -1174,7 +1174,7 @@
 
           
           <div class="method-source-code" id="start_instance-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 172</span>
+            <pre><span class="ruby-comment"># File lib/mos_sdk.rb, line 172</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">start_instance</span>(<span class="ruby-identifier">iid</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
@@ -1214,7 +1214,7 @@
 
           
           <div class="method-source-code" id="stop_instance-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 181</span>
+            <pre><span class="ruby-comment"># File lib/mos_sdk.rb, line 181</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">stop_instance</span>(<span class="ruby-identifier">iid</span>, <span class="ruby-identifier">force</span>=<span class="ruby-keyword">false</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
@@ -1253,7 +1253,7 @@
 
           
           <div class="method-source-code" id="terminate_instance-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 198</span>
+            <pre><span class="ruby-comment"># File lib/mos_sdk.rb, line 198</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">terminate_instance</span>(<span class="ruby-identifier">iid</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
