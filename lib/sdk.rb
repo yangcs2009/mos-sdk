@@ -178,7 +178,7 @@ class Sdk::Sdk
 
   # 停止虚拟机
   # - @param [String] iid 虚拟机ID
-  # - @param [Symbol] force 是否强制停止虚拟机
+  # - @param [] force 是否强制停止虚拟机
   def stop_instance(iid, force=false)
     kwargs = {}
     kwargs['InstanceId'] = iid
@@ -218,6 +218,7 @@ class Sdk::Sdk
   # - @param [String] duration 指定更改后的初始租期，缺省为'1M'，即一个月
   # - @param [Integer] datadisk 指定创建虚拟机使用的额外数据盘，单位为1GB
   # - @param [Integer] bandwidth 指定创建虚拟机使用的额外带宽，单位为Mbps
+  # - 省略datadisk和bandwidth参数无法成功修改，具体用法可参考对应测试样例
   def change_instance_type(iid, itype, duration=nil, datadisk=nil, bandwidth=nil)
     kwargs = {}
     kwargs['InstanceId'] = iid
@@ -312,7 +313,3 @@ class Sdk::Sdk
     self.request('DeleteTemplate', *kwargs)
   end
 end
-
-
-cli = Sdk::Sdk.new('c9b13af321f247a496f925d70ce001b3','7013bacdb1d44e0a851aa8786f742596','https://192.168.2.33:8883')
-puts  cli.get_balance

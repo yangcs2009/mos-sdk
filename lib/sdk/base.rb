@@ -22,7 +22,7 @@ class Sdk::Base
   # - @param [String] url
   # - @param [String] format  默认为xml格式
   # - @param [Integer] timeout
-  # - @param [Symbol] debug
+  # - @param [] debug
   def initialize(access, secret, url, format='xml', timeout=300, debug=false)
     @access=access
     @secret=secret
