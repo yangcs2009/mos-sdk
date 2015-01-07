@@ -58,9 +58,10 @@
   <h3>Table of Contents</h3>
 
   <ul class="link-list" role="directory">
-    <li><a href="#label-MOSAPI_RUBY">MOSAPI_RUBY</a>
+    <li><a href="#label-RUBY+SDK">RUBY SDK</a>
     <li><a href="#label-1.+%E5%B7%A5%E7%A8%8B%E7%BB%93%E6%9E%84%E8%AF%B4%E6%98%8E">1. 工程结构说明</a>
-    <li><a href="#label-2.+%E4%BD%BF%E7%94%A8SDK">2. 使用SDK</a>
+    <li><a href="#label-2.+%E5%AE%89%E8%A3%85">2. 安装</a>
+    <li><a href="#label-2.+%E4%BD%BF%E7%94%A8">2. 使用</a>
   </ul>
 </div>
 
@@ -91,26 +92,44 @@
 
 <main role="main" aria-label="Page README.md">
 
-<h1 id="label-MOSAPI_RUBY">MOSAPI_RUBY<span><a href="#label-MOSAPI_RUBY">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
+<h1 id="label-RUBY+SDK">RUBY SDK<span><a href="#label-RUBY+SDK">&para;</a> <a href="#documentation">&uarr;</a></span></h1>
 
-<p><strong>编码规范参照 <a
-href="https://github.com/bbatsov/rubocop">github.com/bbatsov/rubocop</a></strong></p>
+<p>为方便客户使用，特提供调用MOS API的Ruby SDK</p>
 
 <h2 id="label-1.+%E5%B7%A5%E7%A8%8B%E7%BB%93%E6%9E%84%E8%AF%B4%E6%98%8E">1. 工程结构说明<span><a href="#label-1.+%E5%B7%A5%E7%A8%8B%E7%BB%93%E6%9E%84%E8%AF%B4%E6%98%8E">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
 
-<p>mos/sdk/common –&gt;sdk的基类文档<br> mos/sdk/v1 –&gt;sdk client<br> doc
-–&gt;对应说明文档<br> test –&gt;对应测试文档</p>
+<p>lib / sdk / base.rb –&gt;sdk的基类文档</p>
 
-<h2 id="label-2.+%E4%BD%BF%E7%94%A8SDK">2. 使用SDK<span><a href="#label-2.+%E4%BD%BF%E7%94%A8SDK">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+<p>lib / sdk.rb –&gt;sdk实现文档</p>
 
-<p>通过Client生成客户端实例，API接口说明参见“mos/sdk/v1/client.rb文档或doc/Client.html”。<br>
-示例代码如下:</p>
+<p>doc –&gt;对应说明文档</p>
 
-<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">&quot;mos/sdk/v1/client&quot;</span>  
+<p>test –&gt;对应测试文档</p>
+
+<h2 id="label-2.+%E5%AE%89%E8%A3%85">2. 安装<span><a href="#label-2.+%E5%AE%89%E8%A3%85">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>Add this line to your application&#39;s Gemfile:</p>
+
+<pre class="ruby"><span class="ruby-identifier">gem</span> <span class="ruby-string">&#39;sdk&#39;</span>
+</pre>
+
+<p>And then execute:</p>
+
+<pre>$ bundle</pre>
+
+<p>Or install it yourself as:</p>
+
+<pre>$ gem install sdk</pre>
+
+<h2 id="label-2.+%E4%BD%BF%E7%94%A8">2. 使用<span><a href="#label-2.+%E4%BD%BF%E7%94%A8">&para;</a> <a href="#documentation">&uarr;</a></span></h2>
+
+<p>通过Sdk生成客户端实例，API接口说明参见“lib/sdk.rb或doc/Sdk/Sdk.html”。<br> 示例代码如下:</p>
+
+<pre class="ruby"><span class="ruby-identifier">require</span> <span class="ruby-string">&quot;sdk&quot;</span>  
 <span class="ruby-identifier">key</span> = <span class="ruby-string">&#39;MOS_ACCESS_KEY&#39;</span>  
 <span class="ruby-identifier">secret</span> = <span class="ruby-string">&#39;MOS_ACCESS_SECRET&#39;</span>  
-<span class="ruby-identifier">url</span> = <span class="ruby-string">&#39;https://mosapi.meituan.com/mcsapi/v1&#39;</span>  
-<span class="ruby-identifier">cli</span> = <span class="ruby-constant">Client</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">secret</span>, <span class="ruby-identifier">url</span>)  
+<span class="ruby-identifier">url</span> = <span class="ruby-string">&#39;MOS_ACCESS_URL&#39;</span>  
+<span class="ruby-identifier">cli</span> = <span class="ruby-constant">Sdk</span><span class="ruby-operator">::</span><span class="ruby-constant">Sdk</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">key</span>, <span class="ruby-identifier">secret</span>, <span class="ruby-identifier">url</span>)
 <span class="ruby-identifier">balance</span> = <span class="ruby-identifier">cli</span>.<span class="ruby-identifier">get_balance</span>()
 <span class="ruby-identifier">puts</span> <span class="ruby-identifier">balance</span>
 </pre>

@@ -229,13 +229,15 @@
 <p>@param [Integer] datadisk 指定创建虚拟机使用的额外数据盘，单位为1GB</p>
 </li><li>
 <p>@param [Integer] bandwidth 指定创建虚拟机使用的额外带宽，单位为Mbps</p>
+</li><li>
+<p>省略datadisk和bandwidth参数无法成功修改，具体用法可参考对应测试样例</p>
 </li></ul>
           
           
 
           
           <div class="method-source-code" id="change_instance_type-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 220</span>
+            <pre><span class="ruby-comment"># File lib/sdk.rb, line 221</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">change_instance_type</span>(<span class="ruby-identifier">iid</span>, <span class="ruby-identifier">itype</span>, <span class="ruby-identifier">duration</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">datadisk</span>=<span class="ruby-keyword">nil</span>, <span class="ruby-identifier">bandwidth</span>=<span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
@@ -349,7 +351,7 @@
 
           
           <div class="method-source-code" id="create_template-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 298</span>
+            <pre><span class="ruby-comment"># File lib/sdk.rb, line 299</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create_template</span>(<span class="ruby-identifier">iid</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">notes</span>=<span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
@@ -389,7 +391,7 @@
 
           
           <div class="method-source-code" id="delete_key_pair-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 287</span>
+            <pre><span class="ruby-comment"># File lib/sdk.rb, line 288</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_key_pair</span>(<span class="ruby-identifier">kid</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;KeyName&#39;</span>] = <span class="ruby-identifier">kid</span>
@@ -427,7 +429,7 @@
 
           
           <div class="method-source-code" id="delete_template-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 308</span>
+            <pre><span class="ruby-comment"># File lib/sdk.rb, line 309</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_template</span>(<span class="ruby-identifier">tid</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;TemplateId&#39;</span>] = <span class="ruby-identifier">tid</span>
@@ -656,7 +658,7 @@
 
           
           <div class="method-source-code" id="describe_key_pairs-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 266</span>
+            <pre><span class="ruby-comment"># File lib/sdk.rb, line 267</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">describe_key_pairs</span>(<span class="ruby-identifier">limit</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">offset</span>=<span class="ruby-value">0</span>, <span class="ruby-identifier">filters</span>=<span class="ruby-keyword">nil</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">parse_array_params</span>(<span class="ruby-identifier">limit</span>, <span class="ruby-identifier">offset</span>, <span class="ruby-identifier">filters</span>, <span class="ruby-identifier">kwargs</span>)
@@ -858,7 +860,7 @@
 
           
           <div class="method-source-code" id="get_instance_metadata-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 237</span>
+            <pre><span class="ruby-comment"># File lib/sdk.rb, line 238</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_instance_metadata</span>(<span class="ruby-identifier">iid</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
@@ -962,7 +964,7 @@
 
           
           <div class="method-source-code" id="import_key_pair-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 277</span>
+            <pre><span class="ruby-comment"># File lib/sdk.rb, line 278</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">import_key_pair</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">pubkey</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;KeyName&#39;</span>] = <span class="ruby-identifier">name</span>
@@ -1004,7 +1006,7 @@
 
           
           <div class="method-source-code" id="put_instance_metadata-source">
-            <pre><span class="ruby-comment"># File lib/sdk.rb, line 247</span>
+            <pre><span class="ruby-comment"># File lib/sdk.rb, line 248</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">put_instance_metadata</span>(<span class="ruby-identifier">iid</span>, <span class="ruby-identifier">data</span>)
   <span class="ruby-identifier">kwargs</span> = {}
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;InstanceId&#39;</span>] = <span class="ruby-identifier">iid</span>
@@ -1205,7 +1207,7 @@
 <ul><li>
 <p>@param [String] iid 虚拟机ID</p>
 </li><li>
-<p>@param [Symbol] force 是否强制停止虚拟机</p>
+<p>@param [] force 是否强制停止虚拟机</p>
 </li></ul>
           
           
