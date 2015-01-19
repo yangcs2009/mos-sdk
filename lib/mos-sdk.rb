@@ -1,14 +1,14 @@
 # -*- coding: utf-8 -*-
-$:.unshift File.join(File.dirname(__FILE__), '.', 'mos_sdk')
+$:.unshift File.join(File.dirname(__FILE__), '.', 'mos-sdk')
 require 'base.rb'
 
-module MosSdk
-  class Client < MosSdk::Base
+module MOS
+  class Client < MOS::Base
   end
 end
 
 # 基类函数为Base，mos_sdk的实现类
-class MosSdk::Client
+class MOS::Client
   # 构造函数
   def initialize(access, secret, url, format='xml', timeout=300, debug=false)
     super(access, secret, url, format, timeout, debug)
