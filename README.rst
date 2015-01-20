@@ -15,13 +15,13 @@ Ruby SDK
 
 从源码安装
 ~~~~~~~~~~
-从 `github下载最新版 <https://github.com/meituan/mcsapi_ruby/archive/master.zip>`_ 代码并解压，或者执行如下命令获取源码::
+如果使用bundler，您需要在Gemfile中添加以下内容::
 
-    git clone https://github.com/meituan/mcsapi_ruby.git
+    gem 'mos-sdk', :git => 'https://github.com/meituan/mcsapi_ruby.git'
 
-进入mcsapi_ruby目录执行下述命令安装ruby SDK::
+执行下述命令安装::
 
-    sudo gem install
+    bundle install
 
 访问MOS控制台的 `API页面 <https://mos.meituan.com/console/#api>`_ 获得API入口URL、ACCESS Key和Secret。
 
