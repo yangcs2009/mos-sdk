@@ -8,13 +8,12 @@ require "rubygems"
 require "crack"
 require "erb"
 include ERB::Util
-
-module MOS
+module Mos
   class Base
   end
 end
 
-class MOS::Base
+class Mos::Base
   attr_accessor :access, :secret, :url, :format, :timeout, :debug
 
   # 基类初始化函数

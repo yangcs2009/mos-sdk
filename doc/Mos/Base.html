@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 
-<title>class MosSdk::Base - RDoc Documentation</title>
+<title>class Mos::Base - RDoc Documentation</title>
 
 <link href="../fonts.css" rel="stylesheet">
 <link href="../rdoc.css" rel="stylesheet">
@@ -95,9 +95,9 @@
   </div>
 </nav>
 
-<main role="main" aria-labelledby="class-MosSdk::Base">
-  <h1 id="class-MosSdk::Base" class="class">
-    class MosSdk::Base
+<main role="main" aria-labelledby="class-Mos::Base">
+  <h1 id="class-Mos::Base" class="class">
+    class Mos::Base
   </h1>
 
   <section class="description">
@@ -241,7 +241,7 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File lib/mos_sdk/base.rb, line 26</span>
+            <pre><span class="ruby-comment"># File lib/mos-sdk/base.rb, line 26</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">access</span>, <span class="ruby-identifier">secret</span>, <span class="ruby-identifier">url</span>, <span class="ruby-identifier">format</span>=<span class="ruby-string">&#39;xml&#39;</span>, <span class="ruby-identifier">timeout</span>=<span class="ruby-value">300</span>, <span class="ruby-identifier">debug</span>=<span class="ruby-keyword">false</span>)
   <span class="ruby-ivar">@access</span>=<span class="ruby-identifier">access</span>
   <span class="ruby-ivar">@secret</span>=<span class="ruby-identifier">secret</span>
@@ -294,7 +294,7 @@
 
           
           <div class="method-source-code" id="_request-source">
-            <pre><span class="ruby-comment"># File lib/mos_sdk/base.rb, line 43</span>
+            <pre><span class="ruby-comment"># File lib/mos-sdk/base.rb, line 43</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">_request</span>(<span class="ruby-identifier">action</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
   <span class="ruby-identifier">params</span> = {}
   <span class="ruby-identifier">params</span>[<span class="ruby-string">&#39;Action&#39;</span>] = <span class="ruby-identifier">action</span>
@@ -365,7 +365,7 @@
 
           
           <div class="method-source-code" id="get_signature-source">
-            <pre><span class="ruby-comment"># File lib/mos_sdk/base.rb, line 83</span>
+            <pre><span class="ruby-comment"># File lib/mos-sdk/base.rb, line 83</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">get_signature</span>(<span class="ruby-identifier">params</span>) <span class="ruby-comment">#signature method</span>
   <span class="ruby-identifier">req</span> = <span class="ruby-constant">URI</span>.<span class="ruby-identifier">parse</span>(<span class="ruby-keyword">self</span>.<span class="ruby-identifier">url</span>)
   <span class="ruby-identifier">host</span> = <span class="ruby-identifier">req</span>.<span class="ruby-identifier">host</span>
@@ -419,7 +419,7 @@
 
           
           <div class="method-source-code" id="parse_array_params-source">
-            <pre><span class="ruby-comment"># File lib/mos_sdk/base.rb, line 150</span>
+            <pre><span class="ruby-comment"># File lib/mos-sdk/base.rb, line 150</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">parse_array_params</span>(<span class="ruby-identifier">limit</span>, <span class="ruby-identifier">offset</span>, <span class="ruby-identifier">filters</span>, <span class="ruby-identifier">kwargs</span>)
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;Limit&#39;</span>] = <span class="ruby-identifier">limit</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">limit</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
   <span class="ruby-identifier">kwargs</span>[<span class="ruby-string">&#39;Offset&#39;</span>] = <span class="ruby-identifier">offset</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">offset</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>
@@ -466,7 +466,7 @@
 
           
           <div class="method-source-code" id="raw_request-source">
-            <pre><span class="ruby-comment"># File lib/mos_sdk/base.rb, line 35</span>
+            <pre><span class="ruby-comment"># File lib/mos-sdk/base.rb, line 35</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">raw_request</span>(<span class="ruby-identifier">action</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
   <span class="ruby-keyword">self</span>.<span class="ruby-identifier">_request</span>(<span class="ruby-identifier">action</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
 <span class="ruby-keyword">end</span></pre>
@@ -506,7 +506,7 @@
 
           
           <div class="method-source-code" id="request-source">
-            <pre><span class="ruby-comment"># File lib/mos_sdk/base.rb, line 125</span>
+            <pre><span class="ruby-comment"># File lib/mos-sdk/base.rb, line 125</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">request</span>(<span class="ruby-identifier">action</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
   <span class="ruby-identifier">resp</span> = <span class="ruby-keyword">self</span>.<span class="ruby-identifier">_request</span>(<span class="ruby-identifier">action</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">kwargs</span>)
   <span class="ruby-identifier">body</span> = <span class="ruby-identifier">resp</span>.<span class="ruby-identifier">body</span>
@@ -560,7 +560,7 @@
 
           
           <div class="method-source-code" id="sha256_hmac-source">
-            <pre><span class="ruby-comment"># File lib/mos_sdk/base.rb, line 115</span>
+            <pre><span class="ruby-comment"># File lib/mos-sdk/base.rb, line 115</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">sha256_hmac</span>(<span class="ruby-identifier">value</span>)
   <span class="ruby-constant">Base64</span>.<span class="ruby-identifier">encode64</span>(
       <span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">HMAC</span>.<span class="ruby-identifier">digest</span>(<span class="ruby-constant">OpenSSL</span><span class="ruby-operator">::</span><span class="ruby-constant">Digest</span>.<span class="ruby-identifier">new</span>(<span class="ruby-string">&#39;sha256&#39;</span>), <span class="ruby-keyword">self</span>.<span class="ruby-identifier">secret</span>, <span class="ruby-identifier">value</span>)
@@ -602,7 +602,7 @@
 
           
           <div class="method-source-code" id="string_to_sign-source">
-            <pre><span class="ruby-comment"># File lib/mos_sdk/base.rb, line 103</span>
+            <pre><span class="ruby-comment"># File lib/mos-sdk/base.rb, line 103</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">string_to_sign</span>(<span class="ruby-identifier">cred_dict</span>, <span class="ruby-identifier">params</span>)
   [
       <span class="ruby-identifier">cred_dict</span>[<span class="ruby-string">&#39;verb&#39;</span>],

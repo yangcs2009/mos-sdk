@@ -1,4 +1,4 @@
-Python SDK
+Ruby SDK
 ===========
 
 
@@ -28,7 +28,7 @@ Python SDK
 使用Ruby SDK
 -------------
 
-通过mosclient.client.Client生成客户端实例，API接口说明实现参见 `Ruby SDK API文档 <http://mcsapi-python.readthedocs.org/zh_CN/latest/client.html>`_ 。
+通过Mos::Client生成客户端实例，API接口说明实现参见Ruby SDK API doc文档 
 
 示例代码如下：
 
@@ -36,12 +36,12 @@ Python SDK
 
         require "mos-sdk"
 
-        version = '1'
         key = 'MOS_ACCESS_KEY'
         secret = 'MOS_ACCESS_SECRET'
-        url = 'https://mosapi.meituan.com/mcs/v1'
+        url = 'MOS_ACCESS_URL'
 
-        cli = MOS::Client(version, key, secret, url)
+        cli = MOS::Client(key, secret, url)
 
         balance = cli.get_balance()
         puts balance
+
