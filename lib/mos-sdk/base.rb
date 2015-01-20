@@ -72,6 +72,7 @@ class MOS::Base
 
     uri = URI.parse(self.url)
     http = Net::HTTP.new(uri.host, uri.port)
+    http.open_timeout=@timeout
     http.use_ssl=true
     http.verify_mode = OpenSSL::SSL::VERIFY_NONE
     http.request_post('/', data, headers)
