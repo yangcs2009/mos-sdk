@@ -9,7 +9,7 @@ class SdkTest <Test::Unit::TestCase
   # - to set up fixture information.
   def setup
     # handler
-    @cli = Mos::Client.new('MOS_ACCESS_KEY', 'MOS_ACCESS_SECRET', 'MOS_ACCESS_URL')
+    @cli = MOS::Client.new('MOS_ACCESS_KEY', 'MOS_ACCESS_SECRET', 'MOS_ACCESS_URL')
   end
 
   # Called after every test method runs. Can be used to tear

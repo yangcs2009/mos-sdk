@@ -5,7 +5,7 @@ require 'mos-sdk/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "mos-sdk"
-  spec.version       = Mos::VERSION
+  spec.version       = MOS::VERSION
   spec.authors       = ["yangcs2009"]
   spec.email         = ["yangchangsheng@meituan.com"]
   spec.summary       = %q{Ruby SDK for MOS.}

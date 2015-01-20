@@ -1,3 +1,3 @@
-module Mos
-  VERSION = "1.0.2"
+module MOS
+  VERSION = "1.0.3"
 end

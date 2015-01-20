@@ -2,13 +2,13 @@
 $:.unshift File.join(File.dirname(__FILE__), '.', 'mos-sdk')
 require 'base.rb'
 
-module Mos
-  class Client < Mos::Base
+module MOS
+  class Client < MOS::Base
   end
 end
 
 # 基类函数为Base，mos-sdk的实现类
-class Mos::Client
+class MOS::Client
   # 构造函数
   def initialize(access, secret, url, format='xml', timeout=300, debug=false)
     super(access, secret, url, format, timeout, debug)

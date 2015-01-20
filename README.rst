@@ -28,7 +28,7 @@ Ruby SDK
 使用Ruby SDK
 -------------
 
-通过Mos::Client生成客户端实例，API接口说明实现参见Ruby SDK API doc文档 
+通过MOS::Client生成客户端实例，API接口说明实现参见Ruby SDK API doc文档 
 
 示例代码如下：
 
