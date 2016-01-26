@@ -113,7 +113,7 @@ class MOS::Client
   # - @param [Integer] datadisk 指定创建虚拟机使用的额外数据盘，单位为1GB
   # - @param [Integer] bandwidth 指定创建虚拟机使用的额外带宽，单位为Mbps
   # - @return [Hash]   创建成功的虚拟机信息
-  def create_instance(imageid, itype, duration=nil, name=nil, keypair=nil, datadisk=nil, bandwidth=nil)
+  def create_instance(imageid, itype, duration=nil, name=nil, keypair=nil, secgroup=nil, datadisk=nil, bandwidth=nil, zone=nil)
     kwargs = {}
     kwargs['ImageId'] = imageid
     kwargs['InstanceType'] = itype
@@ -125,6 +125,8 @@ class MOS::Client
     kwargs['KeyName'] = keypair unless keypair.nil?
     kwargs['ExtraExtDisksize'] = datadisk unless datadisk.nil?
     kwargs['ExtraExtBandwidth'] = bandwidth unless bandwidth.nil?
+    kwargs['GroupId'] = secgroup unless secgroup.nil?
+    kwargs['AvailabilityZoneId'] = zone unless zone.nil?
     val = self.request('CreateInstance', *kwargs)
     val['Instance']
   end
